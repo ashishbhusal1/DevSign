@@ -1,0 +1,53 @@
+.myBox {
+  width: calc(100%- (40px+30px+50px));
+  height: 300px;
+  margin: 25px;
+  background-color: grey;
+  /* padding: 20px; */
+  border: 15px solid;
+  overflow: hidden;
+  position: relative;
+}
+.innerbox {
+  width: calc(33.33%-20px);
+  height: 200px;
+  background-color: red;
+  float: left;
+  margin: 10px;
+}
+.box1 {
+  background-image: url(./8325.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box2 {
+  background-image: url(/Day2/8325.jpg),
+    url(/Day1/wallpaperflare.com_wallpaper-2.jpg);
+  background-size: 72px, 30px;
+  background-repeat: no-repeat, no-repeat;
+}
+.box3 {
+  background: linear-gradient(90deg, red 25%, green 50%);
+  position: absolute;
+  top: 15px;
+  left: 45%;
+}
+.box4 {
+  background: radial-gradient(circle, red 25%, green 50%);
+}
+.box5 {
+  background-image: url(./8325.jpg);
+  background-position: center;
+  overflow: hidden;
+  background-attachment: local;
+}
+.box5 p{
+    color: white;
+}
+.box6 {
+  border: 2px dashed red !important;
+  border-radius: 18px 0px 18px 0;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}

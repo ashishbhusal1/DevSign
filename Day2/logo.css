@@ -1,0 +1,41 @@
+.box{
+    background-color: grey;
+    height: 197px;
+    width: 180px;
+    border-radius: 5%;
+    margin: 50px auto;
+    
+}
+.name{
+    color: white;
+    font-size: 24px;
+}
+.evo{
+    background-color:black;
+    height: 140px;
+    width: 150px;
+}
+.logo
+{
+    color: blue;
+    font-size: 80px;
+}
+.word
+{
+    color: white;
+    font-size: 15px;
+}
+.core{
+    color: white;
+    font-size: 20px;
+}
+.i7{
+    display: flex;
+    justify-content: end;
+}
+.text{
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    font-size: 30px;
+}

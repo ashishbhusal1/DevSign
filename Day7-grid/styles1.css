@@ -1,0 +1,38 @@
+div.grid-container {
+  background-color: #ddd;
+  padding: 20px;
+  display: grid;
+  /* grid-template-columns: repeat(4,100px); */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 100px 100px;
+  gap: 20px;
+  justify-content: center;
+}
+div.grid-item {
+  height: 100px;
+  background-color: green;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+div.grid-item p {
+  color: white;
+  font-size: 22pt;
+  margin: 0;
+}
+div.grid-item p:nth-child(5) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  /* grid-column: 2/4; */
+}
+/* ----------  */
+div.grid-container{
+    background-color: #fff;
+    display: grid
+    
+}
+div.grid-item p2{
+    grid-column:2/4;
+}
+
+/* ----------------  */

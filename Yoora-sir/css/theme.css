@@ -1,0 +1,115 @@
+@import url(./base.css);
+
+/* Website Header */
+header {padding: 15px 0;}
+header nav div.logo {margin-right: 45px;}
+header nav div.logo a img {width: 100px;height: 40px;object-fit: contain;}
+header nav ul.navigation li {margin: 0 15px; position: relative;}
+header nav ul.navigation li a {color: var(--site-black);text-decoration: none;}
+header nav ul.navigation li a:hover {text-decoration: underline;}
+header div.actions a {padding: 7px 10px;text-decoration: none;color: var(--site-black);background-color: var(--site-white);border: 1px solid var(--site-soft-stroke);font-size: 11pt;border-radius: 4px;}
+header div.actions a:last-child {background-color: var(--site-dark-color);color: var(--site-white);margin-left: 10px;}
+div.hammenu {display: none;
+width: 35px;
+height: 35px;}
+div.hammenu img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+
+header nav ul.navigation li:hover .hover-menu {
+display: block;
+}
+.hover-menu {
+display: none;
+padding: 20px;
+background-color: var(--site-white);
+border-radius: 7px;
+box-shadow: 0 15px 35px #0000001c;
+width: 240px;
+position: absolute;
+left: -80px;
+}                           
+.hover-menu ul {
+display: flex;
+flex-direction: column;
+}
+.hover-menu ul li {
+display: flex;
+flex-direction: column;
+padding: 10px 0; cursor: pointer;
+}
+.hover-menu ul li:hover {background-color: var(--site-mute-white);}
+.hover-menu ul li h3 {
+font-size: 12pt;
+line-height: 22pt;
+}
+.hover-menu ul li p {font-size: 10pt;}
+
+/* Website Header */
+
+
+/* Homepage Hero Section */
+section.home-hero {padding: 75px 0;background-image: url(./../images/large/dashboard.png);background-size: 580px;background-repeat: no-repeat;background-position: 100% 7%;}
+div.hero-content {gap: 25px;}
+div.hero-content div.content {flex: 1;justify-content: flex-start;align-items: flex-start;}
+div.hero-content div.content h1 {font-size: 38pt;font-weight: 600;color: var(--site-black);line-height: 46pt;}
+div.hero-content div.content p {font-size: 12pt;line-height: 20pt;margin: 10px 0;width: 480px;color: var(--site-black);}
+div.subscription {width: 420px;margin-top: 20px;}
+div.subscription div.form {background-color: var(--site-white);border: 1px solid var(--site-soft-stroke);padding: 7px;display: flex;flex-direction: row;justify-content: space-between;border-radius: 15px;}
+div.subscription div.form input {border: none;padding: 10px;flex: 1;}
+div.subscription div.form span {display: block;background-color: var(--site-green);color: var(--site-white);text-align: center;height: 100%;padding: 12px 20px;border-radius: 7px;cursor: pointer;font-size: 11pt;}
+div.subscription p {font-size: 9pt !important;margin: 5px !important;}
+div.hero-content div.image {flex: 1;height: 435px;}
+
+/* Trusted Companies */
+div.trusted-companies {width: 100%;margin-top: 50px;}
+div.trusted-companies h3 {font-size: 11pt;color: var(--site-black);flex: 1;}
+div.trusted-companies ul {flex: 2;}
+div.trusted-companies ul li {cursor: pointer;display: flex;flex-direction: row;justify-content: center;align-items: center;}
+div.trusted-companies ul li img {width: 130px;height: 45px;object-fit: cover;}
+/* Homepage Hero Section */
+
+
+/** Homepage Benefits */
+section.benefits {padding: 65px 0;background-color: var(--site-dark-color);}
+section.benefits * {color: var(--site-white);}
+section.benefits div.headings {gap: 55px;}
+section.benefits div.headings h2 {flex: 1;font-size: 28pt;line-height: 35pt;}
+section.benefits div.headings p {flex: 1;line-height: 24pt;}
+section.benefits ul.benefit {gap: 15px;width: 100%;margin-top: 50px;}
+section.benefits ul.benefit li {padding: 35px 25px;width: 33.33%;background-color: var(--site-soft-dark-color);height: 300px;display: flex;flex-direction: column;justify-content: flex-start;align-items: flex-start;cursor: pointer;border-radius: 15px;}
+section.benefits ul.benefit li span {display: block;width: 75px;height: 75px;margin-bottom: 35px;background-image: url(./../images/icons/support-white.png);
+background-size: 65px;background-repeat: no-repeat;background-position: center;}
+section.benefits ul.benefit li div.seprator {background-color: var(--site-mute-white);height: 1px;margin: 15px 0; width: 100%;}
+section.benefits ul.benefit li h3 {font-size: 12pt;margin-bottom: 10px;font-weight: 500;width: 215px;line-height: 20pt;}
+section.benefits ul.benefit li p {font-size: 11pt;line-height: 17pt;font-weight: 300;width: 235px;}
+
+section.benefits ul.benefit li:first-child span {background-image: url(./../images/icons/lead-white.png);}
+section.benefits ul.benefit li:last-child span {background-image: url(./../images/icons/grow-white.png);}
+
+section.benefits ul.benefit li:hover {background-color: var(--site-yellow);}
+section.benefits ul.benefit li:hover span {background-image: url(./../images/icons/support-black.png);}
+section.benefits ul.benefit li:first-child:hover span {background-image: url(./../images/icons/lead-black.png);}
+section.benefits ul.benefit li:last-child:hover span {background-image: url(./../images/icons/grow-black.png);}
+section.benefits ul.benefit li:hover div.seprator {background-color: var(--site-dark-color);}
+section.benefits ul.benefit li:hover h3 {color: var(--site-black);}
+section.benefits ul.benefit li:hover p {color: var(--site-black);}
+/** Homepage Benefits */
+
+
+/** Company features */
+section.features {padding: 65px 0;background-color: var(--site-white);}
+section.features ul li {gap: 45px;align-items: flex-start;padding: 55px 0;border-top: 1px solid var(--site-soft-stroke);}
+section.features ul li div.content {flex: 1;justify-content: flex-start;align-items: flex-start;margin-right: 65px;}
+section.features ul li div.image {flex: 1;background-color: var(--site-soft-white);display: flex;flex-direction: row;justify-content: center;align-items: center;border-radius: 15px;}
+section.features ul li div.image img {width: 350px;height: auto;object-fit: contain;padding: 30px 0;}
+section.features ul li div.content span {display: block;padding: 5px 10px;background-color: var(--site-yellow);border-radius: 4px;text-transform: uppercase;font-size: 10pt;letter-spacing: 0.15px; margin-bottom: 15px;}
+section.features ul li div.content h2 {font-size: 30pt;font-weight: 500;line-height: 38pt;}
+section.features ul li div.content p {line-height: 20pt;margin: 15px 0; font-size: 11pt;}
+ul.feature-list > li {border: none !important;padding: 3px 0 !important;line-height: 23pt;position: relative;padding-left: 30px !important;font-size: 11pt;}
+ul.feature-list > li::before {content: '';width: 24px;height: 24px;position: absolute;background-image: url(./../images/svg/check-mark.svg);left: 0px;background-repeat: no-repeat;
+background-size: contain;background-position: center;top: 8px;}
+
+/** Company features */

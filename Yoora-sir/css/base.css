@@ -1,0 +1,68 @@
+
+:root {
+      --site-background: #f4f4f4;
+      --site-dark-color: #004050;
+      --site-soft-dark-color: #0a4756;
+      --site-green: #00cc61;
+      --site-yellow: #ffe377;
+
+
+      --site-white: #ffffff;
+      --site-soft-white: #f4f4f4;
+      --site-mute-white: #f2f2f2;
+
+      --site-black: #000000;
+      --site-soft-black: #181818;
+      --site-mute-black: #222222;
+
+      --site-stroke: #222222;
+      --site-soft-stroke: #E1E1E1;
+      --site-mute-stroke: #f2f2f2;
+}
+
+* {
+      font-family: "Rubik", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      margin: 0px; padding: 0px;
+}
+
+body {
+      background-color: var(--site-background);
+      margin: 0px; padding: 0px;
+}
+
+ul, li {
+      margin: 0px; padding: 0px;
+      list-style-type: none;
+}
+
+
+input:focus {
+      outline: none;
+      border: none;
+}
+
+div.wrapper {
+      height: auto;
+      width: 1170px;
+      margin: 0px auto;
+}
+
+.flex-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.row-reverse {
+      flex-direction: row-reverse;
+}
+
+.flex-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}

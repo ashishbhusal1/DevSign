@@ -1,0 +1,14 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.login{
+    color: blue;
+    background-color: antiquewhite;
+    border-color: red;
+}
+.login:hover{
+    color: red;
+    background-color: green;
+    border-color: aqua;
+}

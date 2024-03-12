@@ -1,0 +1,445 @@
+html {
+  overflow-x: hidden !important;
+}
+
+/************************************************************************************
+smaller than 1480 
+*************************************************************************************/
+
+@media screen and (max-width: 1480px) {
+}
+
+/************************************************************************************
+smaller than 1366
+*************************************************************************************/
+
+@media screen and (max-width: 1366px) {
+}
+
+/************************************************************************************
+smaller than 1280
+*************************************************************************************/
+
+@media screen and (max-width: 1280px) {
+  div.appwrap div.apps ul li img {
+    height: 60px;
+    padding: 15px 25px;
+  }
+}
+
+/************************************************************************************
+smaller than 1170 (the default size of the website)
+*************************************************************************************/
+
+@media screen and (max-width: 1170px) {
+  div.wrapper {
+    width: 90%;
+  }
+  div.hero-content div.content h1 {
+    font-size: 40px;
+    line-height: 40pt;
+  }
+  div.customers {
+    gap: 100px;
+  }
+  div.customer-logos > ul > li > img {
+    height: 60px;
+  }
+  div.customer-logos > ul {
+    gap: 20px;
+  }
+  div.postwrap div.post-heading h2 {
+    font-size: 50px;
+  }
+  div.testimonialwrap div.heading h2 {
+    font-size: 35px;
+  }
+  div.testimonialwrap div.heading span {
+    font-size: 16px;
+  }
+  div.footerwrap div.main {
+    gap: 15px;
+    margin-left: 100px;
+  }
+  div.footerwrap div.bottom-content {
+    gap: 150px;
+  }
+}
+
+/************************************************************************************
+smaller than 1024
+*************************************************************************************/
+
+@media screen and (max-width: 1024px) {
+  section.hero {
+    background-size: 450px;
+  }
+  h2.product-heading {
+    font-size: 30px;
+  }
+  div.product-image img {
+    width: 350px;
+  }
+  p.product-paragraph {
+    font-size: 16px;
+  }
+  div.appwrap div.apps ul li img {
+    height: 50px;
+  }
+  div.postwrap div.post-heading h2 {
+    font-size: 40px;
+  }
+  div.postwrap div.post-heading p {
+    font-size: 16px;
+  }
+  div.postwrap div.post-content ul li h4 {
+    font-size: 25px;
+  }
+  div.footerwrap div.bottom-content {
+    gap: 100px;
+  }
+}
+
+/************************************************************************************
+smaller than 980
+*************************************************************************************/
+
+@media screen and (max-width: 980px) {
+  div.hero-content div.content h1 {
+    font-size: 35px;
+    line-height: 35pt;
+  }
+  section.hero {
+    background-size: 420px;
+    background-position: 100% 15%;
+  }
+  div.postwrap div.post-heading h2 {
+    font-size: 30px;
+  }
+  div.postwrap div.post-heading p {
+    font-size: 14px;
+  }
+  div.postwrap div.post-content ul li h4 {
+    font-size: 20px;
+  }
+  div.footerwrap div.bottom-content {
+    gap: 70px;
+  }
+  div.footerwrap div.bottom-content div.terms {
+    gap: 25px;
+  }
+}
+
+/************************************************************************************
+smaller than 768
+*************************************************************************************/
+
+@media screen and (max-width: 768px) {
+  div.wrapper {
+    width: 90%;
+  }
+
+  ul.nav-menu {
+    display: none;
+  }
+  div.hammenu {
+    display: block;
+  }
+  section.hero {
+    background-image: none;
+  }
+  div.hero-content div.content {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  div.hero-content div.content h1,
+  div.hero-content div.content p,
+  div.h-email-input span {
+    text-align: center;
+  }
+  div.h-email-input span {
+    text-align: center;
+  }
+  div.customers {
+    flex-direction: column;
+    gap: 20px;
+  }
+  div.benefitwrap div.content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  div.benefitwrap div.content p {
+    width: auto;
+    padding-right: 0px;
+  }
+  div.benefitwrap div.content p,
+  div.benefitwrap div.content h2 {
+    text-align: center;
+  }
+  ul.product1,
+  ul.product2 {
+    flex-direction: column;
+    gap: 0px;
+  }
+  ul.product1 > li {
+    padding-top: 0px;
+  }
+  div.appwrap div.content h2 {
+    font-size: 30pt;
+  }
+  div.appwrap div.apps ul li img {
+    height: 35px;
+    padding: 10px 20px;
+  }
+  div.appwrap div.apps ul li.big1 {
+    padding: 0px 19px;
+  }
+  div.appwrap div.rest-text p {
+    font-size: 14pt;
+  }
+  div.post-heading {
+    gap: 200px;
+    margin-left: -110px;
+  }
+  div.postwrap div.post-content ul li span {
+    font-size: 12px;
+  }
+  div.postwrap div.post-content ul li .span2 {
+    font-size: 10px;
+  }
+  div.postwrap div.revenue ul li div.wrap div.content h4 {
+    font-size: 22px;
+  }
+  div.postwrap div.revenue ul li div.wrap div.sales h3 {
+    font-size: 55px;
+  }
+  div.testimonialwrap div.heading h2 {
+    font-size: 26px;
+  }
+  div.testimonialwrap div.heading {
+    gap: 200px;
+  }
+  div.testimonialwrap div.content ul li p {
+    font-size: 18px;
+  }
+  div.testimonialwrap div.content ul li div.author h5 {
+    font-size: 14px;
+  }
+  div.testimonialwrap div.content ul li div.author p {
+    font-size: 12px;
+  }
+  div.footerwrap div.bottom-content div.copyright span {
+    font-size: 12px;
+  }
+  div.footerwrap div.bottom-content div.terms span {
+    font-size: 12px;
+  }
+  div.footerwrap div.bottom-content span.english {
+    font-size: 12px;
+  }
+}
+
+/************************************************************************************
+smaller than 680
+*************************************************************************************/
+
+@media screen and (max-width: 680px) {
+  div.customer-logos > ul > li > img {
+    height: 45px;
+  }
+  div.benefitwrap div.card {
+    flex-direction: column;
+  }
+  div.card div.card1 {
+    width: auto;
+  }
+  div.card div.card1 div.text h4,
+  div.card div.card1 div.text p,
+  div.card div.logo {
+    width: auto;
+    text-align: center;
+  }
+  div.appwrap div.content h2 {
+    font-size: 20pt;
+    text-align: center;
+  }
+  div.appwrap div.content p {
+    font-size: 12pt;
+    text-align: center;
+  }
+  div.postwrap div.post-heading h2 {
+    font-size: 25px;
+  }
+  div.post-heading {
+    gap: 150px;
+  }
+  div.postwrap div.revenue h2 {
+    font-size: 35px;
+  }
+  div.postwrap div.revenue p {
+    font-size: 14px;
+  }
+  div.testimonialwrap div.content ul {
+    flex-direction: column;
+  }
+  div.testimonialwrap div.content ul li {
+    width: auto;
+  }
+  div.footerwrap div.main div.logo-content div.logo span {
+    font-size: 15pt;
+  }
+  div.footerwrap div.main div.logo-content div.logos i {
+    font-size: 20px;
+  }
+  div.footerwrap div.main div.logo-content div.logo img {
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  div.testimonialwrap div.heading {
+    gap: 20px;
+  }
+  div.testimonialwrap div.heading h2 {
+    font-size: 22px;
+  }
+  div.testimonialwrap div.heading span {
+    font-size: 14px;
+    width: calc(20%);
+  }
+  div.footerwrap div.main div.logo-content p {
+    font-size: 11px;
+  }
+  div.footerwrap div.main div.company ul li:first-child,
+  div.footerwrap div.main div.company ul li {
+    font-size: 12px;
+  }
+  div.footerwrap div.bottom-content {
+    gap: 30px;
+  }
+  div.footerwrap div.bottom-content div.terms {
+    gap: 10px;
+  }
+  div.footerwrap div.bottom-content span.english,
+  div.footerwrap div.bottom-content div.terms span,
+  div.footerwrap div.bottom-content div.terms span {
+    font-size: 10px;
+  }
+}
+
+/************************************************************************************
+smaller than 480
+*************************************************************************************/
+
+@media screen and (max-width: 480px) {
+  div.customer-logos > ul > li > img {
+    height: 40px;
+  }
+  div.appwrap div.content p {
+    font-size: 11pt;
+  }
+  div.appwrap div.content h2 {
+    font-size: 14pt;
+  }
+  div.appwrap div.content p {
+    font-size: 9pt;
+  }
+  div.appwrap div.apps ul li img {
+    height: 20px;
+    padding: 5px 10px;
+  }
+  div.appwrap div.apps ul li.big1 {
+    padding: 0px 10px;
+  }
+  div.appwrap div.rest-text p {
+    font-size: 10pt;
+  }
+  div.postwrap div.post-content ul li h4 {
+    font-size: 15px;
+  }
+  div.postwrap div.post-heading h2 {
+    font-size: 20px;
+  }
+  div.post-heading {
+    gap: 80px;
+    margin-left: -80px;
+  }
+  div.postwrap div.revenue h2 {
+    font-size: 25px;
+  }
+  div.postwrap div.revenue p {
+    font-size: 12px;
+  }
+  div.postwrap div.revenue ul li div.wrap div.sales h3 {
+    font-size: 40px;
+  }
+  div.postwrap div.revenue ul li div.wrap div.content h4 {
+    font-size: 15px;
+  }
+  div.postwrap div.revenue ul li div.wrap div.author h5 {
+    font-size: 15px;
+  }
+  div.postwrap div.revenue p {
+    font-size: 10px;
+  }
+  div.testimonialwrap div.heading h2 {
+    font-size: 18px;
+  }
+  div.testimonialwrap div.content ul li p {
+    font-size: 16px;
+  }
+  div.testimonialwrap div.content ul li div.author h5 {
+    font-size: 12px;
+  }
+  div.testimonialwrap div.content ul li div.author p {
+    font-size: 10px;
+  }
+  div.footerwrap div.main div.company ul li:first-child, div.footerwrap div.main div.company ul li{
+    font-size: 8px;
+  }
+  div.footerwrap div.main{
+    gap: 8px;
+  }
+  div.footerwrap div.main div.logo-content div.logo img{
+    width: 25px;
+  }
+  div.footerwrap div.main div.logo-content div.logo span{
+    font-size: 10pt;
+  }
+  div.footerwrap div.main div.logo-content div.logos i{
+    font-size: 15px;
+  }
+  div.footerwrap div.line{
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  div.footerwrap div.bottom-content div.copyright span{
+    font-size: 8px;
+  }
+  div.footerwrap div.bottom-content span.english, div.footerwrap div.bottom-content div.terms span, div.footerwrap div.bottom-content div.terms span{
+    font-size: 7px;
+  }
+  div.footerwrap div.bottom-content{
+    margin-left: 50px;
+  }
+}
+
+/************************************************************************************
+smaller than 380
+*************************************************************************************/
+@media screen and (max-width: 380px) {
+}
+
+/************************************************************************************
+smaller than 360
+*************************************************************************************/
+@media screen and (max-width: 360px) {
+}
+
+/************************************************************************************
+smaller than 320
+*************************************************************************************/
+@media screen and (max-width: 320px) {
+}

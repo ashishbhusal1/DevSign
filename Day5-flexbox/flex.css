@@ -1,0 +1,11 @@
+div{
+    display: flex;
+}
+div.flex-container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-end;
+    gap: 40px;
+}

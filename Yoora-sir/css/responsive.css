@@ -1,0 +1,173 @@
+html {overflow-x: hidden !important;}
+
+
+/************************************************************************************
+smaller than 1480 
+*************************************************************************************/
+
+@media screen and (max-width: 1480px) {
+	
+}
+
+/************************************************************************************
+smaller than 1366
+*************************************************************************************/
+
+@media screen and (max-width: 1366px) {
+	
+}
+
+/************************************************************************************
+smaller than 1280
+*************************************************************************************/
+
+@media screen and (max-width: 1280px) {
+	
+      
+}
+
+/************************************************************************************
+smaller than 1170 (the default size of the website)
+*************************************************************************************/
+
+@media screen and (max-width: 1170px) {
+    div.wrapper {width: 90%;}
+}
+
+
+/************************************************************************************
+smaller than 1024
+*************************************************************************************/
+
+@media screen and (max-width: 1024px) {
+    section.home-hero {
+        background-size: 490px;
+    }
+
+    div.hero-content div.content h1 {
+        font-size: 32pt;line-height: 40pt;
+    }
+
+}
+
+
+/************************************************************************************
+smaller than 980
+*************************************************************************************/
+
+@media screen and (max-width: 980px) {
+    section.home-hero {
+        background-size: 450px;
+        background-position: 100% 15%;
+    }
+
+    section.benefits ul.benefit li h3 {width: auto;}
+    section.benefits ul.benefit li p {width: auto;}
+}
+
+
+/************************************************************************************
+smaller than 768
+*************************************************************************************/
+
+@media screen and (max-width: 768px) {
+    ul.navigation {display: none;}
+    div.hammenu {display: block;}
+
+    section.benefits ul.benefit {
+        flex-direction: column;
+    }
+    section.benefits ul.benefit li {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.benefits ul.benefit li p {text-align: center;}
+
+    section.benefits div.headings {
+        flex-direction: column;
+    }
+
+    section.benefits div.headings p {text-align: center;}
+
+    section.home-hero {
+        background-image: none;
+    }
+
+    div.hero-content {
+        flex-direction: column;
+    }
+
+    div.hero-content div.content {
+        justify-content: center;
+    align-items: center;
+    }
+
+    div.hero-content div.content h1 {text-align: center;}
+    div.hero-content div.content p {text-align: center;}
+    div.trusted-companies {flex-direction: column;}
+    section.benefits div.headings h2 {text-align: center;}
+
+    section.features ul li {
+        flex-direction: column;
+    }
+    section.features ul li div.image {width: 100%;}
+
+    div.hero-content div.image {
+     flex: none;
+    height: 435px;
+    background-image: url(./../images/large/dashboard.png);
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+}
+
+/************************************************************************************
+smaller than 680
+*************************************************************************************/
+
+@media screen and (max-width: 680px) {
+
+    div.trusted-companies ul {flex-wrap: wrap;}
+
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+
+
+/************************************************************************************
+smaller than 480
+*************************************************************************************/
+
+@media screen and (max-width: 480px) {
+
+}
+
+/************************************************************************************
+smaller than 380
+*************************************************************************************/
+@media screen and (max-width: 380px) {
+	
+
+}
+
+/************************************************************************************
+smaller than 360
+*************************************************************************************/
+@media screen and (max-width: 360px) {
+	
+	
+}
+
+/************************************************************************************
+smaller than 320
+*************************************************************************************/
+@media screen and (max-width: 320px) {
+
+}

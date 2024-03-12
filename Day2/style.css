@@ -1,0 +1,42 @@
+body {
+  background-color: white;
+}
+div .oo {
+  margin: 200px;
+}
+img {
+  height: 400px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+p {
+  line-height: 1.1;
+  word-spacing: 1.5;
+}
+.nav .logo {
+  float: left;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+ul {
+  float: right;
+}
+ul > li {
+  display: inline-block;
+  margin: 0px 20px;
+}
+li > a {
+  text-decoration: none;
+}
+ul > li:last-child a {
+  border: 2px solid orangered;
+  padding: 5px;
+  border-radius: 8px;
+}
+ul > li:last-child a:hover {
+  background-color: orangered;
+  transition: ease-in 0.5s;
+  color: white;
+}
