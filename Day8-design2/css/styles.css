@@ -1,0 +1,74 @@
+.wrapper {
+  width: 1170px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body {
+  margin: 80px 0px;
+}
+div.herowrap div.content h1 {
+  font-size: 57px;
+  font-weight: 500;
+  width: calc(40%);
+}
+div.herowrap div.content p {
+  color: grey;
+  width: calc(25%);
+}
+div.herowrap div.content button {
+  padding: 10px 20px;
+  background-color: #00cc61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+div.herowrap div.content {
+  background: url(../images/background.png) no-repeat;
+  width: 100%;
+  height: 640px;
+  background-position: 100% 0%;
+}
+div.productwrap div.content h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+div.productwrap div.cards ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 10px;
+  align-items: center;
+  margin-right: 20px;
+}
+div.productwrap div.cards ul li.card {
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+  width: 210px;
+  margin-top: -120px;
+}
+div.productwrap div.cards ul li.card h2 {
+  color: white;
+}
+div.productwrap div.cards ul li.card p {
+  color: white;
+  font-size: 17px;
+  width: 160px;
+  padding-top: 20px;
+  text-align: left;
+}
+div.productwrap div.cards ul li.card1 {
+  background-color: #f48fb1;
+}
+div.productwrap div.cards ul li.card2 {
+  background-color: #ff8a65;margin-top: -135px;
+}
+div.productwrap div.cards ul li.card3 {
+  background-color: #4ac6d6;
+}
