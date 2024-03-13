@@ -1,0 +1,168 @@
+html {overflow-x: hidden !important;}
+
+
+/************************************************************************************
+smaller than 1480 
+*************************************************************************************/
+
+@media screen and (max-width: 1480px) {
+	
+}
+
+/************************************************************************************
+smaller than 1366
+*************************************************************************************/
+
+@media screen and (max-width: 1366px) {
+	
+}
+
+/************************************************************************************
+smaller than 1280
+*************************************************************************************/
+
+@media screen and (max-width: 1280px) {
+	
+      
+}
+
+/************************************************************************************
+smaller than 1170 (the default size of the website)
+*************************************************************************************/
+
+@media screen and (max-width: 1170px) {
+    div.wrapper {width: 90%;} 
+section.hero{
+    background-position: 0.8% 94%;
+}
+div.footerwrap{
+    padding-left: 150px;
+}
+}
+
+
+/************************************************************************************
+smaller than 1024
+*************************************************************************************/
+
+@media screen and (max-width: 1024px) {
+    div.herowrap div.content-section p{
+        font-size: 18px;
+    }
+
+}
+
+
+/************************************************************************************
+smaller than 980
+*************************************************************************************/
+
+@media screen and (max-width: 980px) {
+
+}
+
+
+/************************************************************************************
+smaller than 768
+*************************************************************************************/
+
+@media screen and (max-width: 768px) {
+    div.footerwrap div.rest{
+        margin-right: 100px;
+    }
+    div.footerwrap{
+        padding-left: 100px;
+    }
+    div.footerwrap div.text h2{
+        font-size: 16px;
+    }
+}
+
+/************************************************************************************
+smaller than 680
+*************************************************************************************/
+
+@media screen and (max-width: 680px) {
+    div.herowrap div.image-section{
+        height: 400px;
+    }
+    section.hero{
+    background-position: 0.8% 70%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+}
+
+
+
+/************************************************************************************
+smaller than 480
+*************************************************************************************/
+
+@media screen and (max-width: 480px) {
+    div.headwrap h1{
+        font-size: 20px;
+    }
+    div.headwrap p{
+        font-size: 8px
+    }
+    div.herowrap div.image-section{height: 250px;}
+    div.herowrap div.content-section{
+        margin-top: -120px;
+    }
+    div.herowrap div.content-section p{
+        font-size: 15px;
+        padding: 5px;
+        width: calc(90%);
+    }div.herowrap div.content-section ul li p{
+        font-size: 8px;
+    }div.herowrap div.content-section ul li span{
+        font-size: 15px;
+    }
+    section.hero{
+        background-position: -0.2% 12%;
+    }
+    div.footerwrap div.text h2 {
+        font-size: 12px;
+    }
+    div.footerwrap {
+        padding-left: 20px;
+    }
+    div.footerwrap div.rest p {
+        font-size: 7px;
+        width: calc(40%);
+    }
+    div.footerwrap div.rest img {
+        height: 80px;
+        width: 80px;
+    }
+    div.footerwrap div.rest {
+        margin-right: 20px;
+        gap: 20px;
+    }
+}
+
+/************************************************************************************
+smaller than 380
+*************************************************************************************/
+@media screen and (max-width: 380px) {
+	
+
+}
+
+/************************************************************************************
+smaller than 360
+*************************************************************************************/
+@media screen and (max-width: 360px) {
+	
+	
+}
+
+/************************************************************************************
+smaller than 320
+*************************************************************************************/
+@media screen and (max-width: 320px) {
+
+}
