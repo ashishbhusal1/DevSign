@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="box">
+      <p id="name">I am paragraph</p>
+    </div>
+
+    <button id="submit">submit</button>
+    <script>
+      alert("Hello wrold");
+      var message = "Hello world";
+      let message = "Hello world";
+      let Message = "Hello world";
+      let value = 5;
+      let floatvalue = 5.5;
+      let _myvar = 5;
+      let $myVar = 6;
+
+      let myAgeIsGreaterThan18 = true;
+
+      let message = "Hello";
+
+      const PI = 3.14;
+      const Primary_color = "#ababab";
+
+      let UserName = "Ashish";
+
+      function isOddEven() {}
+
+      //Datatypes
+      //Number (int,float,infinity,nan)
+      let Mynumber = 5;
+      let MyFloat = 15.6;
+      console.log(MyNumber / 0); //infinity
+      console.log(5 + x); //nan
+      let age = 25;
+
+      //string
+      let name = "Ashish";
+      let sirname = "bhusal";
+      let string = `hello`;
+      console.log("Your age is" + age);
+      console.log(`Your age is $(age)`);
+
+      let html = `<div><h1>This is heading</h1></div>;`;
+
+      //boolean
+
+      let isGreater = true;
+      console.log(isGreater);
+      let isGreat = 10 > 5;
+
+      //array
+
+      //object
+
+      //undefined,null
+
+      //
+      var age2 = 15;
+      if (age > 10) {
+        console.log("is greater than 10");
+      } else if (age > 15) {
+        console.log("is greater then 15");
+      } else {
+        console.log("is less then 10");
+      }
+
+      //
+      if (age > 10) console.log("is greater then 10");
+      else if (age > 15) console.log("is greater then 15");
+      // switch case
+
+      switch (age) {
+        case 10:
+          console.log("is greater than 10");
+          break;
+        case 20:
+          onsole.log("is greater than 10");
+          break;
+
+          // loop
+          //forloop
+          for (let i = 0; i < 10; i++) {
+            console.log(i);
+          }
+
+          //while
+
+          //alert,prompt,confirm
+
+          alert("Hello world");
+          let age = prompt("how old are you?");
+          alert(`You are $(age) years old`);
+
+          let isGreater = confirm("Are you greater than 18?");
+          console.log(isGreater);
+
+          let age1, number, country;
+          age = 25;
+
+          //
+          let name = document.getElementById("name");
+          name.innerText = "Hello world";
+
+          //
+          let button = document.getElementById("button");
+          button.onClick = function () {
+            let name = document.getElementById("name");
+            name.innerText = "Hello world";
+          };
+      }
+    </script>
+  </body>
+</html>
