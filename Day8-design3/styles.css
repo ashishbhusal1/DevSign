@@ -1,0 +1,87 @@
+.wrapper {
+  width: 1170px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body {
+  background-color: #d7f5dc;
+}
+.wrapper .logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+.wrapper .logo::after {
+  content: "AGENCY";
+  font-size: 22px;
+  font-weight: 600;
+  color: #ff8345;
+}
+.wrapper div.nav-menu ul {
+  display: flex;
+  list-style: none;
+  font-size: 22px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.wrapper div.nav-menu ul li:first-child::after {
+  content: "  >";
+}
+.wrapper div.action {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 20px;
+}
+.button {
+  text-decoration: none;
+  border: 1px solid #49b674;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: black;
+}
+.wrapper div.action .register {
+  color: white;
+  background-color: #49b674;
+}
+
+div.wrapper div.content h1 {
+  font-size: 50px;
+}
+div.wrapper div.content p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.getStarted {
+  color: white;
+  background-color: #49b674;
+  font-size: 25px;
+  padding: 20px 30px;
+}
+div.wrapper div.content a {
+  margin-top: 20px;
+}
+section.logos div.wrapper {
+  background-color: white;
+  width: 100%;
+  margin-top: 50px;
+}
+section.logos div.wrapper ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 50px;
+  margin: 48px 150px;
+}
+section.logos div.wrapper ul li img {
+  height: 53px;
+}
+div.wrapper div.heroImg img{
+    height: 600px;
+    margin-bottom: -54px;
+}
