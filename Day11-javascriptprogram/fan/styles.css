@@ -1,0 +1,55 @@
+div.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fanImg {
+    animation-name: fananimation;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .stop {
+    animation-play-state: paused;
+  }
+  .one {
+    animation-duration: 0.7s;
+  }
+  .two {
+    animation-duration: 0.5s;
+  }
+  .three {
+    animation-duration: 0.3s;
+  }
+  .turbo{
+    animation-duration: .1s;
+  }
+  @keyframes fananimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+div.fan img {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
+ul.buttons {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-top: 35px;
+}
+ul.buttons li {
+  border: 1px solid #abc;
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 0px 5px;
+  cursor: pointer;
+}
