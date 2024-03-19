@@ -651,9 +651,13 @@ div.testimonialwrap div.content ul li div.author p {
 /* Supercharge  */
 section.supercharge {
   background: linear-gradient(90deg, #013b48 62%, #fee377 38%);
+  position: relative;
+  overflow: hidden;
 }
 div.superwrapper {
   display: flex;
+  position: relative;
+  overflow: hidden;
   
 }
 div.superwrapper div.blue {
@@ -688,17 +692,16 @@ div.superwrapper div.yellow a {
   z-index: 2;
 
 }
-div.superwrapper::after {
+section.supercharge::after {
   content: "";
    position: absolute;
   display: inline-block;
-  height: 650px;
-  width: 650px;
+  height: 750px;
+  width: 750px;
   border-radius: 50%;
   background-color: #00cc61;
-  top: 890%;
-  right: -45px;
-  transform: translateY(50%);  
+  top: 70px;
+  right: -130px;
   z-index: 1;
 }
 div.superwrapper div.yellow span {
