@@ -42,7 +42,7 @@ header div.add-task:hover img {
 header div.add-task:hover p {
   color: black;
 }
-ul.toddo-list {
+ul.todo-list {
   display: flex;
   flex-direction: column;
 }
@@ -137,4 +137,27 @@ div.input-box div.button button {
 button.addbtn {
   background-color: #ff9800;
   color: white;
+}
+
+ul.todo-list li.complete div.radio {
+  background-color: #4caf50;
+}
+ul.todo-list li.complete div.content h3 {
+  text-decoration: line-through;
+}
+ul.todo-list li.complete div.content p {
+  text-decoration: line-through;
+}
+div.empty-task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.empty-task img {
+  width: 300px;
+}
+div.empty-task p {
+  font-size: 12pt;
+  color: #000000b0;
 }
