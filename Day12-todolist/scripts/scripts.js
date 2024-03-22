@@ -16,13 +16,10 @@ AddTask.onclick = function () {
   var description = Desc.value;
   let list = createTaskList(title, description);
   TodoList.insertAdjacentHTML("beforeend", list);
-
-  TodoList.appendChild(list);
   Header.classList.remove("write");
   Title.value = "";
   Desc.value = "";
-
-  addTaskBlock.style.display="none";
+addTaskBlock.style.display="flex";
 
   //remove empty task
   EmptyTask.style.display = "none";

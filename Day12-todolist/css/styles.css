@@ -95,6 +95,15 @@ ul.todo-list li div.action {
   gap: 10px;
   display: none;
 }
+ul.todo-list li.complete div.radio {
+  background-color: #4caf50;
+}
+ul.todo-list li.complete div.content h3 {
+  text-decoration: line-through;
+}
+ul.todo-list li.complete div.content p {
+  text-decoration: line-through;
+}
 header.write div.input-box {
   display: block;
 }
@@ -137,16 +146,6 @@ div.input-box div.button button {
 button.addbtn {
   background-color: #ff9800;
   color: white;
-}
-
-ul.todo-list li.complete div.radio {
-  background-color: #4caf50;
-}
-ul.todo-list li.complete div.content h3 {
-  text-decoration: line-through;
-}
-ul.todo-list li.complete div.content p {
-  text-decoration: line-through;
 }
 div.empty-task {
   display: flex;
