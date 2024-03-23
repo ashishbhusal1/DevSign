@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="search" placeholder="search" class="input" />
+      <ul class="list" id="list">
+        <li>
+          <p>Ashish Bhusal</p>
+        </li>
+        <li>
+          <p>Nikita Sharma</p>
+        </li>
+        <li>
+          <p>Nabin Pandey</p>
+        </li>
+        <li>
+          <p>Kabul Devkota</p>
+        </li>
+      </ul>
+    </div>
+
+    <style>
+      .container {
+        width: 420px;
+        height: auto;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .input {
+        padding: 10px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      ul li {
+        padding: 5px;
+        border-bottom: 1px solid #c3c;
+      }
+      ul li p {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 14pt;
+      }
+    </style>
+    <script>
+      var searchInput = document.getElementById("search");
+      var UList = document.getElementById("list");
+
+      var nodeList = UList.getElementsByTagName("p");
+      // console.log(nodeList);
+      searchInput.addEventListener("keyup", function (e) {
+        //    console.log(e);
+        let query = searchInput.value.toUpperCase();
+
+        // console.log(query);
+        for (let i = 0; i < nodeList.length; i++) {
+          //   console.log(nodeList[i]);
+          let name = nodeList[i].innerText.toUpperCase();
+          //console.log(name);
+          if (name.includes(query)) {
+            nodeList[i].parentElement.style.display = "block";
+          } else {
+            nodeList[i].parentElement.style.display = "none";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

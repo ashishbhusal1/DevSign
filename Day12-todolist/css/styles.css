@@ -16,6 +16,10 @@ header {
   flex-direction: column;
   gap: 5px;
   margin-bottom: 25px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px;
 }
 header h1 {
   font-size: 24pt;
@@ -159,4 +163,42 @@ div.empty-task img {
 div.empty-task p {
   font-size: 12pt;
   color: #000000b0;
+}
+
+div.app-search{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.app-search img{
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.6;
+}
+div.app-search img:hover{
+  opacity: 1;
+}
+div.search-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #9e9e9e;
+  border-radius: 4px;
+  display: none;
+}
+div.search-box input{
+  padding: 7px;
+  border: none;
+}
+div.search-box img{
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+div.search-box img:hover{
+  opacity: 1;
 }

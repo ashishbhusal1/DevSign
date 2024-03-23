@@ -3,6 +3,10 @@ var Header = document.getElementById("Header");
 var addTaskBlock = document.getElementById("addTaskBlock");
 var TodoList = document.getElementById("TodoList");
 var EmptyTask = document.getElementById("EmptyTask");
+var SearchBtn = document.getElementById("SearchBtn");
+var SearchBox = document.getElementById("SearchBox");
+var CloseSearch = document.getElementById("closeSearch");
+var SearchTxt = document.getElementById("SearchTxt");
 
 //button selector
 var Cancel = document.getElementById("Cancel");
@@ -19,7 +23,7 @@ AddTask.onclick = function () {
   Header.classList.remove("write");
   Title.value = "";
   Desc.value = "";
-addTaskBlock.style.display="flex";
+  addTaskBlock.style.display = "flex";
 
   //remove empty task
   EmptyTask.style.display = "none";
@@ -81,3 +85,41 @@ addTaskBlock.onclick = function () {
 Cancel.onclick = function () {
   Header.classList.remove("write");
 };
+
+SearchBtn.onclick = function () {
+  this.style.display = "none";
+  SearchBox.style.display = "flex";
+};
+CloseSearch.onclick = function () {
+  SearchBtn.style.display = "block";
+  SearchBox.style.display = "none";
+};
+document.addEventListener("keyup", function (e) {
+  console.log(e);
+  if (e.key == "Escape") {
+    //close search
+    SearchBtn.style.display = "block";
+    SearchBox.style.display = "none";
+
+    Header.classList.remove("write");
+  }
+});
+
+//search text keyup event
+SearchTxt.addEventListener("keyup", function () {
+  let query = this.value.toUpperCase();
+  let list = TodoList.getElementsByTagName("li");
+  console.log(list);
+  for (let i = 0; i < list.length; i++) {
+    let title = list[i].getElementsByTagName("h3")[0];
+    let desc = list[i].getElementsByTagName("p")[0];
+    title = title.innerText.toUpperCase();
+    desc = desc.innerText.toUpperCase();
+
+    if (title.includes(query) || desc.includes(query)) {
+      list[i].style.display = "flex";
+    } else {
+      list[i].style.display = "none";
+    }
+  }
+});
