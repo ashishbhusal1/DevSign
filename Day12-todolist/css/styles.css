@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: "Open Sans", sans-serif;
 }
 input:focus {
   outline: none;
@@ -165,22 +166,22 @@ div.empty-task p {
   color: #000000b0;
 }
 
-div.app-search{
+div.app-search {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-div.app-search img{
+div.app-search img {
   width: 25px;
   height: 25px;
   object-fit: contain;
   cursor: pointer;
   opacity: 0.6;
 }
-div.app-search img:hover{
+div.app-search img:hover {
   opacity: 1;
 }
-div.search-box{
+div.search-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -188,17 +189,17 @@ div.search-box{
   border-radius: 4px;
   display: none;
 }
-div.search-box input{
+div.search-box input {
   padding: 7px;
   border: none;
 }
-div.search-box img{
+div.search-box img {
   width: 20px;
   height: 20px;
   padding: 8px;
   cursor: pointer;
   opacity: 0.6;
 }
-div.search-box img:hover{
+div.search-box img:hover {
   opacity: 1;
 }

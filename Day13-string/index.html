@@ -36,6 +36,55 @@
 
       let result4 = Sentence.toUpperCase().includes(searchWord.toUpperCase());
       console.log(result4);
+
+      let res = Sentence.indexOf(searchWord);
+      let res1 = Sentence.indexOf("you");
+      let res3 = Sentence.lastIndexOf("you");
+      console.log(res);
+      console.log(res1);
+
+      //slice and substring
+      String.slice(indexStart, indexEnd);
+      let sliceRes = Sentence.slice(0, 5);
+      let sliceRes1 = Sentence.slice(10); //from 10 to last index
+      console.log(sliceRes);
+      console.log(sliceRes1);
+
+      let subRes = Sentence.substring(0, 5);
+      console.log(subRes);
+
+      //replacement
+      let replaceRes = Sentence.replace("today", "yesterday");
+      let replaceRes1 = Sentence.replaceAll("l", "w");
+      console.log(replaceRes);
+      console.log(replaceRes1);
+
+      //Regexp
+      let word = /[a-z]/gi; //i case sensitive g global
+      let replaceRes3 = Sentence.replace(word, "*");
+      let replaceRes4 = Sentence.replaceAll(word, "*");
+      console.log(replaceRes3);
+      console.log(replaceRes4);
+
+      //split
+      let split=Sentence.split(' ');
+      console.log(split); //output in array
+      split[1];
+
+      //settimeout
+      setTimeout(function(){
+        //statement
+        alert('Hello there?')
+      },2000);
+
+      setInterval(function(){
+        alert('Hello there?')
+      },2000);
+      
+      setTimeout(()=>{
+        alert('Hello there?')
+      },2000);
+
     </script>
   </body>
 </html>

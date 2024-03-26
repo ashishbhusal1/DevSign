@@ -36,7 +36,11 @@ TodoList.addEventListener("click", function (e) {
   if (dataid == "delete") {
     alert("Are you sure, you want to delete?");
     let task = target.parentElement.parentElement;
-    task.remove();
+    task.classList.add('animate__fadeOutLeft');
+    setTimeout(()=>{
+      task.remove();
+    },900);
+
     if (TodoList.childElementCount == 0) {
       EmptyTask.style.display = "flex";
     }
@@ -66,7 +70,7 @@ TodoList.addEventListener("click", function (e) {
 // }
 
 function createTaskList(title, description) {
-  let li = ` <li>
+  let li = ` <li class="animate__animated animate__fadeInUp">
   <div class="radio" data-id="complete"></div>
   <div class="content">
     <h3>${title}</h3>
