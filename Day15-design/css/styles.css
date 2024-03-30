@@ -1,0 +1,244 @@
+@import url(./base.css);
+
+.btn {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 70px;
+  border-radius: 15px;
+  color: white;
+  background-color: var(--site-dark-color);
+  border: none;
+}
+
+div.navWrapper {
+  background-color: var(--site-dark-color);
+}
+div.nav {
+  padding: 5px 20px;
+}
+div.nav .menu ul {
+  gap: 35px;
+  color: white;
+}
+div.nav .menu ul li {
+  font-size: 18px;
+  font-weight: 400;
+}
+div.nav div.search i {
+  color: white;
+  font-size: 24px;
+}
+
+div.heroWrap {
+  background-image: url(../images/hero.jpg);
+  height: 600px;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+div.content {
+  width: calc(50%);
+  margin-left: 0;
+  color: white;
+  padding: 150px 0px 150px 50px;
+  gap: 30px;
+  align-items: flex-start;
+}
+div.content h1 {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+div.content {
+  font-size: 20px;
+}
+div.menuWrap {
+  background-color: var(--site-dark-color);
+  height: 600px;
+}
+div.menuWrap div.menu {
+  color: white;
+  padding: 50px 100px;
+  padding-bottom: 20px;
+}
+div.menuWrap div.menu h2 {
+  font-size: 50px;
+}
+div.menuWrap div.menu p {
+  width: calc(50%);
+  margin: 30px 0px;
+}
+div.menuWrap div.menu ul li img {
+  border-radius: 50%;
+  height: 200px;
+  margin-top: 20px;
+  justify-content: center;
+}
+div.menuWrap div.menu ul li h5 {
+  font-size: 20px;
+  margin-top: 15px;
+}
+div.menuWrap div.menu ul li p {
+  width: calc(80%);
+  font-size: 12px;
+  text-align: center;
+}
+div.foodWrap {
+  background-color: var(--site-light-color);
+  height: 600px;
+}
+div.foodWrap div.food {
+  padding: 15px 100px 0px 100px;
+}
+div.foodWrap div.food div.image img {
+  height: 400px;
+  border-radius: 50%;
+}
+div.foodWrap div.food div.content {
+  gap: 40px;
+}
+div.foodWrap div.food div.content h2 {
+  font-size: 60px;
+  color: var(--site-dark-color);
+}
+div.foodWrap div.food div.content p {
+  color: var(--site-dark-color);
+}
+div.statWrap {
+  height: 600px;
+  padding-bottom: 100px;
+}
+div.statWrap div.stats {
+  background-color: var(--site-dark-color);
+  color: white;
+  padding: 50px 120px;
+}
+div.stats h2 {
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+div.stats p {
+  width: calc(70%);
+  text-align: center;
+  margin-top: 20px;
+}
+div.stats ul {
+  gap: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+div.stats ul li {
+  border: 4px solid;
+  border-radius: 50%;
+  padding: 50px;
+}
+
+div.stats ul li p {
+  font-size: 40px;
+  font-weight: 600;
+}
+div.userWrap{
+    background-image: url(../images/background.jpg);
+    height: 600px;
+    color: white;
+   padding-top: 150px;
+}
+div.userWrap div.user{
+    gap: 40px;
+}
+div.userWrap div.user img{
+    border-radius: 50%;
+}
+div.userWrap div.user p{
+    font-size: 30px;
+    width: calc(70%);
+    text-align: center;
+}
+div.userWrap div.user h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+div.titleWrap{
+    height: 600px;
+    padding-top: 150px;
+    background-color:var(--site-light-color) ;
+}
+div.titleWrap div.title{
+    gap: 50px;
+}
+div.titleWrap div.title h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+div.titleWrap div.title p{
+    font-size: 22px;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 50px;
+}
+div.titleWrap div.title div.email-input{
+    border: 1px solid grey;
+    background-color: white;
+    border-radius: 25px;
+    padding: 0px 0px 0px 0px ;
+    width: 700px;
+}
+div.titleWrap div.title div.email-input input{
+    border: none;
+    width: 440px;
+    padding-left: 20px;
+}
+div.titleWrap div.title div.email-input a{
+    text-decoration: none;
+    height: 30px;
+    padding-top: 13px;
+    border-radius: 25px;
+}
+
+div.footWrap{
+    background-color: rgba(0, 0, 0, 0.886);
+    color: white;
+    height: 600px;
+}
+div.footWrap div.footer{
+    padding-top: 200px;
+    margin-left: 80px;
+    margin-right: 80px;
+
+}
+div.footWrap div.footer div.foot-content{
+    width: calc(35%);
+align-items: flex-start;
+gap: 30px;
+}
+div.footWrap div.footer div.foot-content h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+div.footWrap div.footer div.foot-content div.icons{
+    gap: 20px;
+
+}
+div.footWrap div.footer div.foot-content div.icons i{
+    font-size: 25px;
+    color: var(--site-dark-color);
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+div.footer ul.mainul{
+    gap: 40px;
+}
+div.footer ul li ul li:first-child{
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+div.footer ul li ul {
+    gap: 10px;
+}
+div.footer ul li ul.lastul{
+    margin-top: -58px;
+}
