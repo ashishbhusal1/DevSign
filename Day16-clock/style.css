@@ -2,9 +2,6 @@
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
 }
-
-.watch {
-}
 .watch .screen {
   display: flex;
   border: 20px solid;
