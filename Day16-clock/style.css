@@ -1,0 +1,49 @@
+* {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.watch {
+}
+.watch .screen {
+  display: flex;
+  border: 20px solid;
+}
+.watch .screen .time {
+  display: flex;
+  width: 56%;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+}
+.watch .screen .time .hrs {
+  font-size: 100px;
+}
+.watch .screen .time .min {
+  font-size: 100px;
+}
+.watch .screen .time .sec {
+  font-size: 100px;
+}
+.watch .screen .time .mili {
+  font-size: 30px;
+}
+.watch .screen .days {
+  margin-top: 13px;
+}
+.watch .screen .days .day {
+  font-size: 20px;
+}
+.watch .screen .days .month {
+  font-size: 20px;
+}
+.watch .screen .days .year {
+  font-size: 20px;
+}
+.watch .screen .days .timezone {
+  font-size: 20px;
+}
+
+span {
+  font-size: 100px;
+}

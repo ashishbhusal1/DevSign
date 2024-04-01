@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [];
+      let array2 = new Array();
+
+      let obj = {};
+      let obj2 = new Object();
+
+      let user = {
+        firstname: "Ashish",
+        lastname: "Bhusal",
+        age: "25",
+        fullname: function () {
+          return this.firstname + " " + this.lastname;
+        },
+        permission: {
+          isAdmin: true,
+          canEdit: true,
+        },
+        "likes coffee": true,
+        35: 75,
+        return: 25,
+        for: 26,
+      };
+      console.log(user.firstname); //Ashish
+      console.log(user.fullname()); //Ashish Bhusal
+
+      user.firstname = "Nikita";
+      console.log(user.firstname);
+      user.college = "CCT";
+      console.log(user);
+      user.permission.isAdmin = false;
+      console.log(user);
+
+      delete user.permission;
+
+      console.log(user["firstname"]);
+      console.log(user["likes coffee"]);
+      console.log(user[35]);
+
+      let countryCode = {
+        977: "Nepal",
+        1: "Us",
+        81: "Japan",
+      };
+      console.log("977");
+
+      // for..in
+      for (property in user) {
+        console.log(property);
+        console.log(user[property]);
+      }
+
+      function CreateUser(firstname, lastname, age) {
+        return {
+          firstname,
+          lastname,
+          age,
+          fullname: function () {
+            return this.firstname + " " + this.lastname;
+          },
+        };
+      }
+      let user1 = CreateUser("John", "Snow", 25);
+      console.log(user.firstname);
+
+      function Student(firstname,lastname,age){
+        this.firstname=firstname;
+        this.lastname=lastname;
+        this.age=age;
+        return this.firstname+ " " + this.lastname;
+      }
+      user=new Student( "Ashish", "Bhusal",25);
+      console.log(user.firstname);
+
+      let fruit='apple';
+      let Student1={
+        name:'mike',
+        age:20,
+        [fruit]:15
+      };
+      Student1.apple; //15
+
+      let Student=User;
+      console.log(Student);
+
+
+//object.assign();
+      let obj1={
+        a:2,
+        b:3
+      }
+      let obj4={
+        b:6,
+        c:7
+      }
+      let obj3={
+        c:10,d:5
+      }
+      let assignedObj=Object.assign(obj1,obj4,obj3);
+      console.log(assignedObj);
+
+      //object.create method
+      let User2={
+        firstname:"Ashish",
+        lastname:"Snow",
+        age:20
+      }
+      let Student=Object.create(User2);
+      Student.firstname='Ashish';
+      console.log(User);
+
+      //Object.keys()
+      console.log(Object.keys(User));
+
+      //Object.values()
+      console.log(Object.values(User));
+
+      User.hasOwnProperty('sirname'); //false
+
+      let Teacher={
+        firstname:'John',
+        lastname:'Snow',
+        age:25,
+        address:{
+            tole:"Aadarsha tole",
+            country:'Nepal',
+            zip:'24800',
+            city:'Bharatpur'
+        }
+      }
+      console.log(Teacher.address?.country);
+    </script>
+  </body>
+</html>
