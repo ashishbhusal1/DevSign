@@ -2,7 +2,7 @@ import Element from "./Element.js";
 import Config from "./Config.js";
 import Todo from "./Todo.js";
 
-Todo.Rendertask(Config.TaskList);
+Todo.RenderTask(Config.TaskList);
 
 (function () {
   //init write mode
