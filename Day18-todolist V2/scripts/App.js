@@ -1,53 +1,110 @@
-import Element from "./Element.js";
-import Config from "./Config.js";
-import Todo from "./Todo.js";
-import Storage from "./Storage.js";
+import Config from './Config.js';
+import Element from './Element.js';
+import Todo from './Todo.js';
+import Storage from './Storage.js';
 
 Config.TaskList = Storage.GetTasks();
-Todo.RenderTask(Config.TaskList);
+Todo.RenderTasks(Config.TaskList);
 
-(function () {
-  //init write mode
-  // add task block
-  Element.addTaskBlock.onclick = function () {
-    Element.Header.classList.add("write");
+
+// write mode to add new tsk
+Element.addTaskBlock.onclick = function () {
+    Element.Header.classList.add('write');
+
     Element.Title.focus();
-  };
-  //cancel write mode
-  Element.Cancel.onclick = function () {
-    Element.Header.classList.remove("write");
-  };
+};
 
-  //create new task
-  Element.AddTask.onclick = function () {
-    Todo.AddNewTask();
+// Cancel write mode i.e. remove add task block 
+Element.Cancel.onclick = function () {
+    Element.Header.classList.remove('write');
+};
 
-    //save updated tasks to storage
+// Add task to the todo-list
+Element.AddTask.onclick = function () {
+    Todo.AddNewTask ();
+
+    // save updated tasks to storage
     Storage.SetTasks(Config.TaskList);
-  };
-  //edit ,complete ,delete tasks
-  Element.TodoList.addEventListener("click", function (e) {
+};
+
+// after dialog box to delete
+Element.DeleteBox.addEventListener('click', function (e) {
     let target = e.target;
-    let button = target.getAttribute("data-button");
+    let button = target.getAttribute('data-button');
 
-    //delete task
-    if (button == "delete") {
-      let TaskLi = target.parentElement.parentElement;
-      let taskId = TaskLi.getAttribute("data-task-id");
-      Todo.DeleteTask(taskId);
-
-      //save updated tasks to storage
-      Storage.SetTasks(Config.TaskList);
+    if (button == 'delClose') {
+        Element.DeleteBox.style.display = 'none';
+        Element.Overlay.style.display = 'none';
     }
 
-    //complete task
-    if (button == "complete") {
-      let TaskLi = target.parentElement;
-      let taskId = TaskLi.getAttribute("data-task-id");
-      Todo.CompleteTask(taskId);
+    if (button == 'delOkay') {
+        let TaskId = Element.DeleteBox.getAttribute('data-task-id');
+        Todo.DeleteTask(TaskId);
 
-      //save updated tasks to storage
-      Storage.SetTasks(Config.TaskList);
+        // save updated tasks to storage
+        Storage.SetTasks(Config.TaskList);
+
+        Element.DeleteBox.style.display = 'none';
+        Element.Overlay.style.display = 'none';
     }
-  });
-})();
+});
+
+
+// edit, delete tasks
+TodoList.addEventListener('click', function (e) {
+    let target = e.target;
+    let button = target.getAttribute('data-button');
+
+    // delete task
+    if (button == 'delete') {
+        let li = target.parentElement.parentElement;
+        let TaskId = li.getAttribute('data-task-id');
+
+        Element.DeleteBox.style.display = 'flex';
+        Element.Overlay.style.display = 'block';
+
+        Element.DeleteBox.setAttribute('data-task-id', TaskId);
+
+        let DelText = Element.DeleteBox.getElementsByTagName('h4')[0];
+        DelText.innerText = `Do you want to delete current task?`;
+    }
+
+    // complete task
+    if (button == 'complete') {
+        let li = target.parentElement;
+        let TaskId = li.getAttribute('data-task-id');
+
+        Todo.CompleteTask (TaskId);
+
+        // save updated tasks to storage
+        Storage.SetTasks(Config.TaskList);
+    }
+
+    // edit task
+    if (button == 'edit') {
+        let li = target.parentElement.parentElement;
+        let TaskId = li.getAttribute('data-task-id');
+
+        Todo.InitEditMode (TaskId);
+    }
+
+    // close edit mode
+    if (button == 'editClose') {
+        Todo.CloseEditMode ();
+    }
+
+    // update task
+    if (button == 'editSave') {
+        let li = target.parentElement.parentElement;
+        let TaskId = li.getAttribute('data-task-id');
+
+        let title, desc;
+        title = li.getElementsByTagName('h3')[0].innerText;
+        desc = li.getElementsByTagName('p')[0].innerText;
+
+        Todo.EditAndSaveTask (TaskId, title, desc);
+
+        // save updated tasks to storage
+        Storage.SetTasks(Config.TaskList);
+    }
+});
