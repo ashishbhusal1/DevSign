@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "./components/header/Header";
-import HeroSection from "./components/hero/HeroSection";
+import HomePage from "./components/pages/HomePage";
+
 
 const App = () => {
   return (
     <>
-      <Header />
-      <HeroSection />
+      <HomePage/>
     </>
   );
 };
