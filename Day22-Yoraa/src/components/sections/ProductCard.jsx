@@ -26,8 +26,9 @@ function ProductCard({content}) {
                 </ul>
               </li>
               <li class="right">
-                <div class="product-image">
-                  <img src="" alt="" />
+                <div class="product-image">{
+                  <img src={content.image}alt="" />
+                }
                 </div>
               </li>
             </ul>

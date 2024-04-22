@@ -48,7 +48,7 @@ export const ProductsCards=[{
       'Track stages and milestones of your deals to keep the sales process on track',
     ],
   },
-  image:''
+  image:'./images/products/product2.png'
 },
 {
   id:2,
@@ -62,7 +62,7 @@ export const ProductsCards=[{
       'Integrate scoail media easily into your marketing campaigns and contact views',
     ],
   },
-  image:''
+  image:'./images/products/product2.png'
 },
 {
   id:3,
@@ -76,5 +76,5 @@ export const ProductsCards=[{
       'Enjoy at-a-glance views of important data-such as ticket priority-on your dashboard',
     ],
   },
-  image:''
+  image:'./../images/products/product2.png'
 }]

@@ -3,9 +3,9 @@ import React from 'react'
 function BenefitsCard(content) {
   return (
     <div class="card1">
-          {/* <div class="logo">
+          { <div class="logo">
             {content.icon}
-          </div> */}
+          </div> }
           <div class="line"></div>
           <div class="text">
             <h4>{content.title}</h4>
