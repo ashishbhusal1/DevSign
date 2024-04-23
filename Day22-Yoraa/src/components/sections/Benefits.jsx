@@ -16,7 +16,13 @@ function Benefits() {
         </div>
         <div class="card">
           {BenefitsCards.map((card) => {
-            return <BenefitsCard key={card.id} content={card} />;
+            return (
+              <BenefitsCard
+                key={card.id}
+                title={card.title}
+                desc={card.description}
+              />
+            );
           })}
         </div>
       </div>

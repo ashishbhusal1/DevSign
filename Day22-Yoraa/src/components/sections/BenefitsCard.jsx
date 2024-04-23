@@ -1,16 +1,16 @@
 import React from 'react'
 
-function BenefitsCard(content) {
+function BenefitsCard({title,desc}) {
   return (
     <div class="card1">
-          { <div class="logo">
-            {content.icon}
-          </div> }
+          <div class="logo">
+          <i className="ri-macbook-line"></i>
+          </div>
           <div class="line"></div>
           <div class="text">
-            <h4>{content.title}</h4>
+            <h4>{title}</h4>
             <p>
-             {content.description}</p>
+             {desc}</p>
           </div>
         </div>
   )
