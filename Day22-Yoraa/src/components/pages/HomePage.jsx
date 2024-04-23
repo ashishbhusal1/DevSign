@@ -4,6 +4,7 @@ import HeroSection from "../hero/HeroSection";
 import Benefits from "../sections/Benefits";
 import Products from "../sections/Products";
 import AppIntegrations from "../sections/AppIntegrations";
+import Posts from "../sections/Posts";
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <Benefits />
       <Products />
       <AppIntegrations/>
+      <Posts/>
     </>
   );
 }
