@@ -103,19 +103,44 @@ export const ServiceContents = [
 ];
 export const RevenueContent = [
   {
-      id:1,
-      sale :' $2.5 M ',
-      salestit : 'Generate sales',
-      title : 'Using Yoora CRM is one of the best decisions weve ever made. Weve seen our annual revenue explode, and the outlook just keeps getting sunnier.',
-      name : 'Nellie Foster',
-      post : 'Founder & CEO, Foster Business Strategies'
+    id: 1,
+    sale: " $2.5 M ",
+    salestit: "Generate sales",
+    title:
+      "Using Yoora CRM is one of the best decisions weve ever made. Weve seen our annual revenue explode, and the outlook just keeps getting sunnier.",
+    name: "Nellie Foster",
+    post: "Founder & CEO, Foster Business Strategies",
   },
   {
-      id:2,
-      sale :' 45% ',
-      salestit : 'Grew revenue',
-      title : 'Yoora is created for sales people. Its the kind of software that just works. I dont have to try to make it work. It already does. It is just perfect.',
-      name : 'Lawrence Gibbs',
-      post : 'Digital Marketing Director'
+    id: 2,
+    sale: " 45% ",
+    salestit: "Grew revenue",
+    title:
+      "Yoora is created for sales people. Its the kind of software that just works. I dont have to try to make it work. It already does. It is just perfect.",
+    name: "Lawrence Gibbs",
+    post: "Digital Marketing Director",
   },
-]
+];
+export const TestimonialsContent = [
+  {
+    id: 1,
+    title:
+      "The best thing we love about Yoora is it does two-way sync with Google Apps. It has helped us to bener orcanize and xees everything on track.",
+    author: "Lola Ross",
+    post: "Digital Marketing Director",
+  },
+  {
+    id: 2,
+    title:
+      "It has made our sales department more effective and efficient. It's easy to use and it's constantly updated. It's easy to use and it's constantly updated.",
+    author: "Daisy Phelps",
+    post: "Speaker and Author, Lifeiseasy",
+  },
+  {
+    id: 3,
+    title:
+      "Easy to use, reasonably priced. and ensures I don't drop the ball on following up with my leads!",
+    author: "Andrew Wilkins",
+    post: "Managing Director,Nirma Studio",
+  },
+];

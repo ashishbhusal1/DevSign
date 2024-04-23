@@ -5,6 +5,7 @@ import Benefits from "../sections/Benefits";
 import Products from "../sections/Products";
 import AppIntegrations from "../sections/AppIntegrations";
 import Posts from "../sections/Posts";
+import Testimonials from "../sections/Testimonials";
 
 function HomePage() {
   return (
@@ -15,6 +16,7 @@ function HomePage() {
       <Products />
       <AppIntegrations/>
       <Posts/>
+      <Testimonials/>
     </>
   );
 }
