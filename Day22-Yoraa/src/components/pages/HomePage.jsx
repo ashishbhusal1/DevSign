@@ -3,6 +3,7 @@ import Header from "../header/Header";
 import HeroSection from "../hero/HeroSection";
 import Benefits from "../sections/Benefits";
 import Products from "../sections/Products";
+import AppIntegrations from "../sections/AppIntegrations";
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <HeroSection />
       <Benefits />
       <Products />
+      <AppIntegrations/>
     </>
   );
 }
