@@ -6,6 +6,8 @@ import Products from "../sections/Products";
 import AppIntegrations from "../sections/AppIntegrations";
 import Posts from "../sections/Posts";
 import Testimonials from "../sections/Testimonials";
+import SuperCharge from "../sections/SuperCharge";
+import Footer from "../footer/Footer";
 
 function HomePage() {
   return (
@@ -17,6 +19,8 @@ function HomePage() {
       <AppIntegrations/>
       <Posts/>
       <Testimonials/>
+      <SuperCharge/>
+      <Footer/>
     </>
   );
 }

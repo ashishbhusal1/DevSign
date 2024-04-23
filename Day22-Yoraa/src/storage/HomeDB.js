@@ -1,4 +1,20 @@
-import { FaLaptop } from "react-icons/fa";
+import { FaLaptop,FaWandMagicSparkles } from "react-icons/fa6";
+import { FaUserCircle } from "react-icons/fa";
+import {
+  Asana,
+  Box,
+  Circle,
+  Flower,
+  Hubspot,
+  Intercom,
+  Meet,
+  Teams,
+  Zendex,
+  Zoom,
+  Post1,
+  Post2
+} from "./../scripts/Images";
+
 
 export const HeroContent = {
   title: "Bringing companies and customers together, anywhere",
@@ -18,7 +34,7 @@ export const BenefitsCards = [
     title: "Lead customers to happiness",
     description:
       "Yoora Support helps you provide personalized support when and where customers need it, so customers stay happy.",
-    // icon: FaCircleUser,
+    icon: FaUserCircle,
   },
   {
     id: 2,
@@ -32,7 +48,7 @@ export const BenefitsCards = [
     title: "Grow without growing pains",
     description:
       "Our software is powerful enough to handle the most complex business, yet flexible enough to scale with you as you grow.",
-    // icon: FaWandMagicSparkles,
+    icon: FaWandMagicSparkles,
   },
 ];
 
@@ -89,8 +105,9 @@ export const ServiceContents = [
     id: 1,
     about: "SERVICE",
     heading: "How to Deliver a Successful  Product Launch",
-    date: "05 Sep 2022",
-    name: "by Joshua Nash ",
+    date: "05 Sep 2022,",
+    name: " by Joshua Nash ",
+    image:Post1
   },
   {
     id: 2,
@@ -98,7 +115,8 @@ export const ServiceContents = [
     heading:
       "What Makes an Authentic Employee Profile, and Why Does it Matter?",
     date: "07 Sep 2022,",
-    name: "by Joshua Nash ",
+    name: " by Joshua Nash ",
+    image:Post2
   },
 ];
 export const RevenueContent = [
@@ -121,6 +139,72 @@ export const RevenueContent = [
     post: "Digital Marketing Director",
   },
 ];
+export  const Integrations = {
+  group1: [
+    {
+      id: 1,
+      name: "circle",
+      image: Circle,
+      class: "",
+    },
+    {
+      id: 2,
+      name: "hubspot",
+      image: Hubspot,
+      class: "big",
+    },
+    {
+      id: 3,
+      name: "zoom",
+      image: Zoom,
+      class: "big",
+    },
+    {
+      id: 4,
+      name: "meet",
+      image: Meet,
+      class: "",
+    },
+    {
+      id: 5,
+      name: "zendex",
+      image:Zendex,
+      class: "big",
+    }
+  ],
+  group2: [
+    {
+      id: 1,
+      name: "intercom",
+      image:Intercom,
+      class: "big1",
+    },
+    {
+      id: 2,
+      name: "box",
+      image:Box,
+      class: "",
+    },
+    {
+      id: 3,
+      name: "flower",
+      image:Flower,
+      class: "",
+    },
+    {
+      id: 4,
+      name: "asana",
+      image:Asana,
+      class: "big1",
+    },
+    {
+      id: 1,
+      name: "teams",
+      image:Teams,
+      class: "",
+    }
+  ],
+};
 export const TestimonialsContent = [
   {
     id: 1,
@@ -143,4 +227,37 @@ export const TestimonialsContent = [
     author: "Andrew Wilkins",
     post: "Managing Director,Nirma Studio",
   },
+];
+export const FooterMenu1 = [
+  { id: 1, title: "Company", link: "#" },
+  { id: 2, title: "About", link: "#" },
+  { id: 3, title: "Jobs", link: "#" },
+  { id: 4, title: "Blog", link: "#" },
+  { id: 5, title: "Pricing", link: "#" },
+  { id: 6, title: "Careers", link: "#" },
+];
+export const FooterMenu2 = [
+  { id: 1, title: "Product", link: "#" },
+  { id: 2, title: "Sales Software", link: "#" },
+  { id: 3, title: "Features", link: "#" },
+  { id: 4, title: "Privacy and security", link: "#" },
+  { id: 5, title: "Marketplace", link: "#" },
+  { id: 6, title: "Status", link: "#" },
+  { id: 7, title: "API", link: "#" },
+];
+export const FooterMenu3= [
+  { id: 1, title: "Discover", link: "#" },
+  { id: 2, title: "Patner Program", link: "#" },
+  { id: 3, title: "Get our newsletter", link: "#" },
+  { id: 4, title: "Sales Pipeline Course", link: "#" },
+  { id: 5, title: "What is CRM?", link: "#" },
+  { id: 6, title: "CRM Comparision", link: "#" },
+  { id: 7, title: "Resources", link: "#" },
+];
+export const FooterMenu4 = [
+  { id: 1, title: "Help Center", link: "#" },
+  { id: 2, title: "Community", link: "#" },
+  { id: 3, title: "Knowledge Based", link: "#" },
+  { id: 4, title: "Academy", link: "#" },
+  { id: 5, title: "Support", link: "#" },
 ];

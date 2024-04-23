@@ -1,16 +1,5 @@
 import React from "react";
-import {
-  Asana,
-  Box,
-  Circle,
-  Flower,
-  Hubspot,
-  Intercom,
-  Meet,
-  Teams,
-  Zendex,
-  Zoom
-} from './../../scripts/Images';
+import { Integrations } from "../../storage/HomeDB";
 
 function AppIntegrations() {
   return (
@@ -25,38 +14,20 @@ function AppIntegrations() {
         </div>
         <div class="apps">
           <ul>
-            <li>
-              <img src={Circle} alt="" />
-            </li>
-            <li class="big">
-              <img src={Hubspot} alt="" />
-            </li>
-            <li class="big">
-              <img src={Zoom}alt="" />
-            </li>
-            <li>
-              <img src={Meet} alt="" />
-            </li>
-            <li class="big">
-              <img src={Zendex} alt="" />
-            </li>
+            {
+                Integrations.group1.map(client=>{
+                    return(
+                        <li><img className={client.class} src={client.image} alt={client.name} /></li>
+                    );
+                })
+            }
           </ul>
           <ul>
-            <li class="big1">
-              <img src={Intercom} alt="" />
-            </li>
-            <li>
-              <img src={Box} alt="" />
-            </li>
-            <li>
-              <img src={Flower} alt="" />
-            </li>
-            <li class="big1">
-              <img src={Asana} alt="" />
-            </li>
-            <li>
-              <img src={Teams} alt="" />
-            </li>
+            {Integrations.group2.map(client=>{
+              return(
+                <li><img className={client.class} src={client.image} alt={client.name}  /></li>
+              )
+            })}
           </ul>
         </div>
         <div class="rest-text">

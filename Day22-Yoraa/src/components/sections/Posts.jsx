@@ -17,7 +17,7 @@ function Posts() {
                 <li>
                   <span>{content.about}</span>
                   <div class="line"></div>
-                  <img src={Post1} alt="" />
+                  <img src={content.image} alt="" />
                   <h4>{content.heading}</h4>
                   <span>{content.date}</span>
                   <span class="span2">{content.name}</span>

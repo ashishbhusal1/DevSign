@@ -16,6 +16,8 @@ import Meet from "../images/apps/meet.png";
 import Teams from "../images/apps/teams.png";
 import Zendex from "../images/apps/zendex.png";
 import Zoom from "../images/apps/zoom.png";
+import Post1 from '../images/posts/post1.png'
+import Post2 from '../images/posts/post2.png'
 
 export {
   Logo,
@@ -34,4 +36,6 @@ export {
   Teams,
   Zendex,
   Zoom,
+  Post1,
+  Post2
 };

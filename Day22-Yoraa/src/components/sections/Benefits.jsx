@@ -21,6 +21,7 @@ function Benefits() {
                 key={card.id}
                 title={card.title}
                 desc={card.description}
+                icon={card.icon}
               />
             );
           })}

@@ -1,10 +1,10 @@
 import React from 'react'
 
-function BenefitsCard({title,desc}) {
+function BenefitsCard({title,desc,icon:Icon}) {
   return (
     <div class="card1">
           <div class="logo">
-          <i className="ri-macbook-line"></i>
+            {<Icon size={50}/>}
           </div>
           <div class="line"></div>
           <div class="text">
