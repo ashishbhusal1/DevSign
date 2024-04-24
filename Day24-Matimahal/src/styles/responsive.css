@@ -1,0 +1,168 @@
+html {overflow-x: hidden !important;}
+ul.resp-nav {display: none;width: 35px;height: 35px;cursor: pointer;margin-right: 0px;}
+ul.resp-nav img {width: 100%;height: 100%;object-fit: contain;}
+
+/************************************************************************************
+smaller than 1480 (the default size of the website)
+*************************************************************************************/
+
+@media screen and (max-width: 1480px) {
+	
+}
+
+/************************************************************************************
+smaller than 1366
+*************************************************************************************/
+
+@media screen and (max-width: 1366px) {
+	
+}
+
+/************************************************************************************
+smaller than 1280
+*************************************************************************************/
+
+@media screen and (max-width: 1280px) {
+	
+	
+}
+
+/************************************************************************************
+smaller than 1170
+*************************************************************************************/
+
+@media screen and (max-width: 1170px) {
+    
+      .wrapper {width:90% !important;}
+      div.faqwraper {width: 720px !important;}
+    
+}
+
+
+/************************************************************************************
+smaller than 1024
+*************************************************************************************/
+
+@media screen and (max-width: 1024px) {
+
+      section.our-story div.image-section ul li {width: 230px;}
+
+}
+
+
+/************************************************************************************
+smaller than 980
+*************************************************************************************/
+
+@media screen and (max-width: 980px) {
+
+      section.header ul.nav > li {padding: 0 8px;}
+      section.our-story div.image-section ul li {width: 42%;}
+    
+
+}
+
+
+/************************************************************************************
+smaller than 768
+*************************************************************************************/
+
+@media screen and (max-width: 768px) {
+
+      section.header ul.nav {display: none;}
+      ul.resp-nav {display: block;}
+      div.heroimage a.btn-primary {width: 180px;}
+      div.ihi-content h1 {width: 90%;font-size: 31pt;}
+      div.internalherader h1 {font-size: 26pt;}
+      div.ihi-content p {width: 90%;font-size: 14pt;}
+
+      div.oswrper {flex-direction: column;}
+      section.our-story div.image-section {width: 100%;}
+      section.our-story div.image-section ul li {width: calc(50% - 32px);}
+      section.our-story div.content {width: 100%;margin-top: 30px;}
+
+      div.faqwraper {width: 90% !important;}
+      div.review {background-size: contain;}
+      div.review ul {flex-direction: column;}
+      div.review ul li {width: 90%;}
+      div.revcontent {margin-top: 25px;}
+      div.review ul li:last-child {margin-top: 25px !important;margin-left: 0px !important;
+      }
+      div.revcontent p {width: 100%;}
+      section.order-online p {width: 100%;}
+      section.order-online a.btn-primary {width: 180px;}
+
+      section.footer div.block-a {flex-direction: column;}
+      section.footer div.block-a div.title h2 {width: 100%;text-align: center;}
+      section.footer div.block-a div.contact ul {width: 100%;margin-top: 15px;align-items: center;}
+      section.footer div.block-b {flex-direction: column;justify-content: space-evenly;}
+      div.imiwraper {display: flex;flex-direction: column-reverse;justify-content: center;align-items: center;}
+      div.menu-image {width: 60%;}
+      div.menu-items {width: calc(100% - 5px);margin-top: 25px;text-align: center;}
+      div.menu-items ul {width: 480px;margin: 0px auto;}section.iMenuitems {margin: 0;}
+      section.gallery-image ul.galleryimg li {width: calc(33.33% - 20px);}
+      section.about-us div.about-content {flex-direction: column;}
+      section.about-us div.about-content div.image {width: 100%;height: 480px;margin-right: 0;margin-bottom: 25px;}
+      section.about-us div.about-content div.content {width: 100%;margin-left: 0;}
+      div.contact-options {flex-direction: column;width: 100%;text-align: center;}
+      div.contact-options div.hours {margin: 20px 0;}
+
+}
+
+/************************************************************************************
+smaller than 680
+*************************************************************************************/
+
+@media screen and (max-width: 680px) {
+
+    
+      section.gallery-text div.content {flex-direction: column;}
+      section.gallery-text div.content p {margin-bottom: 10px;}
+      section.gallery-text {padding-bottom: 0px;}
+}
+
+@media screen and (max-width: 640px) {
+
+      section.our-story div.image-section ul {flex-direction: column;flex-wrap: nowrap;}
+      section.our-story div.image-section ul li {width: calc(100% - 20px);}
+	section.our-story div.image-section ul li:last-child {margin-top: 10px;}
+
+      section.home-gallery ul.larger {flex-direction: column;}
+      section.home-gallery ul.larger li:last-child {margin-left: 0px; margin-top: 15px;}
+      section.home-gallery ul.larger li {width: calc(100% - 2px);}
+
+      div.internalherader h1 {font-size: 22pt;}
+      div.internalherader p {font-size: 12pt;line-height: 16pt;}
+
+      div.menu-items ul {width: 100%;}
+      section.gallery-image ul.galleryimg li {width: calc(50% - 20px);}
+}
+
+
+
+/************************************************************************************
+smaller than 480
+*************************************************************************************/
+
+@media screen and (max-width: 480px) {
+
+      section.gallery-image ul.galleryimg li {width: calc(100% - 20px);}
+
+}
+
+/************************************************************************************
+smaller than 380
+*************************************************************************************/
+@media screen and (max-width: 380px) {
+	
+
+}
+
+@media screen and (max-width: 360px) {
+	
+	
+}
+
+@media screen and (max-width: 320px) {
+
+}
