@@ -1,21 +1,55 @@
-.active{
-    color:red
+.active {
+  color: red;
 }
-ul.accr{
-    list-style-type: none;
-    padding: 0;
-    margin: 42px auto;
-    display: flex;
-    flex-direction:column;
 
+ul.accr {
+  list-style-type: none;
+  padding: 0;
+  margin: 42px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #abc;
+  width: 80%;
 }
-ul.accr li div.title{
-    padding: 15px;
-    border: 1px solid #abc;
-    cursor: pointer;
+ul.accr li {
 }
-ul.accr li div.content{
-    padding: 15px;
-    border: 1px solid #abc;
-    cursor: pointer;
+ul.accr li div.title {
+  padding: 15px;
+  border: 1px solid #abc;
+  cursor: pointer;
+}
+ul.accr li div.content {
+  padding: 25px 15px;
+  background-color: #f0f0f0;
+}
+
+div.gallery {
+  width: 50%;
+  margin: 0px auto;
+  border: 1px solid #abc;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+div.gallery div.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.gallery div.image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+div.gallery div.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+div.gallery p {
+  text-align: center;
 }

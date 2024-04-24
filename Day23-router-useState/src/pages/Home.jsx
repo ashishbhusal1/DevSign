@@ -9,8 +9,9 @@ function Home() {
     });
   };
   const dec = () => {
-    Counter -= 1;
-    setCounter(Counter);
+    setCounter((prevCounter) => {
+      return prevCounter - 1;
+    });
   };
   return (
     <div>
