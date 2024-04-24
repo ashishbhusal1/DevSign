@@ -1,3 +1,21 @@
 .active{
     color:red
 }
+ul.accr{
+    list-style-type: none;
+    padding: 0;
+    margin: 42px auto;
+    display: flex;
+    flex-direction:column;
+
+}
+ul.accr li div.title{
+    padding: 15px;
+    border: 1px solid #abc;
+    cursor: pointer;
+}
+ul.accr li div.content{
+    padding: 15px;
+    border: 1px solid #abc;
+    cursor: pointer;
+}
