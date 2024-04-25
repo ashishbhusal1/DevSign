@@ -1,49 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 function Contact() {
-  const [accordion, setAccordion] = useState([
-    {
-      id: 1,
-      title: "Accordion1",
-      content: "accordion 1",
-      active: "true",
-    },
-    {
-      id: 2,
-      title: "Accordion2",
-      content: "accordion 2",
-      active: "false",
-    },
-    {
-      id: 3,
-      title: "Accordion3",
-      content: "accordion 3",
-      active: "false",
-    },
-  ]);
-  const itemClicked = (item) => {
-    setAccordion(
-      accordion.map((element) => {
-        if (element.id === item.id) element.active = true;
-        else element.active = false;
-        return element;
-      })
-    );
-  };
-
+  const [password, showPassword] = useState(false);
   return (
     <>
-      <h1>Contact</h1>
-      <ul className="accr">
-        {accordion.map((item) => {
-          return (
-            <li key={item.id}>
-              <div className="title" onClick={()=>{itemClicked(item)}}>{item.title}</div>
-              {item.active && <div className="content">{item.content}</div>}
-            </li>
-          );
-        })}
-      </ul>
+      <div
+        className="logi"
+        style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+      >
+        <input
+          type="text"
+          style={{ padding: "10px" }}
+          placeholder="Input Email"
+        />
+        <input
+          type="password"
+          style={{ padding: "10px" }}
+          placeholder="Input Password"
+        />
+
+        {Visibility ? <FaEye size={32} /> : <FaEyeSlash size={32} />}
+      </div>
     </>
   );
 }

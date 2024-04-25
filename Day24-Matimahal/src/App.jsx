@@ -7,6 +7,7 @@ import About from "./components/pages/About";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Error404 from "./components/pages/Error404";
+import Order from './components/home/Order'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
+      <Order />
       <Footer />
     </>
   );

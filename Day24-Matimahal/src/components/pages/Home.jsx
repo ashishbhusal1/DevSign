@@ -4,7 +4,7 @@ import Hero from "../home/Hero";
 import Story from "../home/Story";
 import Gallery from "../home/Gallery";
 import Faq from "../home/Faq";
-import Order from "../home/Order";
+import Reviews from "../home/Reviews";
 
 function Home() {
   return (
@@ -12,8 +12,8 @@ function Home() {
       <Hero />
       <Story />
       <Gallery />
+      <Reviews /> 
       <Faq />
-      <Order />
     </>
   );
 }

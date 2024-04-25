@@ -1,8 +1,9 @@
 import React from 'react'
+import GalleryPage from '../gallery/GalleryPage'
 
 function Gallery() {
   return (
-    <div>Gallery</div>
+   <GalleryPage />
   )
 }
 

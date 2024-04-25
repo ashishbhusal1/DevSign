@@ -8,6 +8,10 @@ import Img12 from "../images/stocks/img12.jpg";
 import Img13 from "../images/stocks/img13.jpg";
 import Img10 from "../images/stocks/img10.jpg";
 import Img11 from "../images/stocks/img11.jpg";
+import Img1 from "../images/stocks/img1.jpg";
+import Img3 from "../images/stocks/img3.jpg";
+import Img6 from "../images/stocks/img6.jpg";
+import Img7 from "../images/stocks/img7.jpg";
 import Img9 from "../images/stocks/img9.jpg";
 import Up from "../images/svg/up.svg";
 import Right from "../images/svg/right.svg";
@@ -25,13 +29,21 @@ import Menu5 from "../images/stocks/menu-5.jpg";
 import Menu6 from "../images/stocks/menu-6.jpg";
 import Menu7 from "../images/stocks/menu-7.jpg";
 import Menu8 from "../images/stocks/menu-8.jpg";
+import User1 from "../images/users/user1.png";
+import User2 from "../images/users/user2.png";
+import User3 from "../images/users/user3.png";
+import User4 from "../images/users/user4.png";
 
 export {
   LogoImg,
   RespMenu,
+  Img1,
   Img2,
+  Img3,
   Img4,
   Img5,
+  Img6,
+  Img7,
   Img8,
   Img12,
   Img13,
@@ -54,4 +66,8 @@ export {
   Menu6,
   Menu7,
   Menu8,
+  User1,
+  User2,
+  User3,
+  User4,
 };
