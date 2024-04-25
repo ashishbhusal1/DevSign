@@ -10,6 +10,18 @@ import {
   Img8,
   Img9,
   Location,
+  Menu1,
+  Menu2,
+  Menu3,
+  Menu4,
+  Menu5,
+  Menu6,
+  Menu7,
+  Menu8,
+  MenuPlate1,
+  MenuPlate2,
+  MenuPlate3,
+  MenuPlate4,
   Right,
   Up,
 } from "../../Scripts/Images";
@@ -117,3 +129,88 @@ export const FooterContent = [
     image: Call,
   },
 ];
+
+export const InternalHeroContent = [
+  {
+    title: "Explore the Flavors of Nepal and India with Our Lunchtime Menu",
+    description:
+      "Our brief menu features some of the most popular Nepali dishes, prepared with a blend of Nepali and Indian Kitchen-style flavors. Enjoy our lunchtime selection of dishes, crafted by our experienced chefs.",
+  },
+];
+
+export const MenuContent = [
+  {
+    key: "1",
+    class: "wrapper imiwraper",
+    title: "Appetizer",
+    heading: [
+      "蒸し餃子6P Momo x6",
+      "ポテトフライ French Fries",
+      "ピリ辛チキン焼きそば/Chicken Chow Mein",
+    ],
+    paragraph: [
+      "ネパール家庭料理 ネパールの餃子です Nepal home recipe, Nepal-style gyoza dumplings.",
+      "ポテトフライ French Fries",
+      "ネパール家庭料理 タンドリーチキン入ったのスパイシー焼きそばです。 Nepal home recipe, spicy yakisoba with tandoori chicken.",
+    ],
+    image: MenuPlate1,
+  },
+  {
+    key: "2",
+    class: "wrapper imiwraper imiwrapright",
+    title: "Tandoori",
+    heading: [
+      "タンドリーチキン Tandoori Chicken",
+      "骨なしタンドリー Chicken Tikka",
+      "スパイシーつくね Seekh Kebab",
+    ],
+    paragraph: [
+      "骨有り鶏もも肉をスパイスに一晩漬け込み釜で焼き上げました。 Chicken thighs on the bone marinated overnight in spices and grilled in our oven.",
+      "食べやすい骨の無い 鶏もも肉をスパイスに一晩漬け込み釜で焼き上げました。 Easy to eat, boneless chicken marinated overnight in spices and grilled in our oven.",
+      "鶏挽肉をスパイスと混ぜ合わせてつくねのように仕上げてあります。 Minced chicken & spices mixed in meatballs.",
+    ],
+    image: MenuPlate2,
+  },
+  {
+    key: "3",
+    class: "wrapper imiwraper",
+    title: "Appetizer",
+    heading: [
+      "蒸し餃子6P Momo x6",
+      "ポテトフライ French Fries",
+      "ピリ辛チキン焼きそば/Chicken Chow Mein",
+    ],
+    paragraph: [
+      "ネパール家庭料理 ネパールの餃子です Nepal home recipe, Nepal-style gyoza dumplings.",
+      "ポテトフライ French Fries",
+      "ネパール家庭料理 タンドリーチキン入ったのスパイシー焼きそばです。 Nepal home recipe, spicy yakisoba with tandoori chicken.",
+    ],
+    image: MenuPlate3,
+  },
+  {
+    key: "4",
+    class: "wrapper imiwraper imiwrapright",
+    title: "Tandoori",
+    heading: [
+      "タンドリーチキン Tandoori Chicken",
+      "骨なしタンドリー Chicken Tikka",
+      "スパイシーつくね Seekh Kebab",
+    ],
+    paragraph: [
+      "骨有り鶏もも肉をスパイスに一晩漬け込み釜で焼き上げました。 Chicken thighs on the bone marinated overnight in spices and grilled in our oven.",
+      "食べやすい骨の無い 鶏もも肉をスパイスに一晩漬け込み釜で焼き上げました。 Easy to eat, boneless chicken marinated overnight in spices and grilled in our oven.",
+      "鶏挽肉をスパイスと混ぜ合わせてつくねのように仕上げてあります。 Minced chicken & spices mixed in meatballs.",
+    ],
+    image: MenuPlate4,
+  },
+];
+export const MenuGallery=[
+  {id:1,image:Menu1},
+  {id:2,image:Menu2},
+  {id:3,image:Menu3},
+  {id:4,image:Menu4},
+  {id:5,image:Menu5},
+  {id:6,image:Menu6},
+  {id:7,image:Menu7},
+  {id:8,image:Menu8},
+]

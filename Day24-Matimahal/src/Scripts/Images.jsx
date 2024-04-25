@@ -13,6 +13,18 @@ import Up from "../images/svg/up.svg";
 import Right from "../images/svg/right.svg";
 import Location from "../images/svg/location.svg";
 import Call from "../images/svg/call.svg";
+import MenuPlate1 from "../images/stocks/rest7-menu-plate-1.png";
+import MenuPlate2 from "../images/stocks/rest7-menu-plate-2.png";
+import MenuPlate3 from "../images/stocks/rest7-menu-plate-3.png";
+import MenuPlate4 from "../images/stocks/rest7-menu-plate-4.png";
+import Menu1 from "../images/stocks/menu-1.jpg";
+import Menu2 from "../images/stocks/menu-2.jpg";
+import Menu3 from "../images/stocks/menu-3.jpg";
+import Menu4 from "../images/stocks/menu-4.jpg";
+import Menu5 from "../images/stocks/menu-5.jpg";
+import Menu6 from "../images/stocks/menu-6.jpg";
+import Menu7 from "../images/stocks/menu-7.jpg";
+import Menu8 from "../images/stocks/menu-8.jpg";
 
 export {
   LogoImg,
@@ -30,4 +42,16 @@ export {
   Right,
   Location,
   Call,
+  MenuPlate1,
+  MenuPlate2,
+  MenuPlate3,
+  MenuPlate4,
+  Menu1,
+  Menu2,
+  Menu3,
+  Menu4,
+  Menu5,
+  Menu6,
+  Menu7,
+  Menu8,
 };
