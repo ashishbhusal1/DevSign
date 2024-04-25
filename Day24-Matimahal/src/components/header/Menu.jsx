@@ -1,5 +1,6 @@
 import React from "react";
 import { HeaderMenu } from "../storage/HomeDb";
+import { NavLink } from "react-router-dom";
 
 function Menu() {
   return (
@@ -7,9 +8,9 @@ function Menu() {
       {HeaderMenu.map((item) => {
         return (
           <li key={item.id}>
-            <a href={item.link} className={item.class} >
+            <NavLink to={item.link} className={item.class} >
               {item.title}
-            </a>
+            </NavLink>
           </li>
         );
       })}
