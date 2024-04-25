@@ -140,6 +140,7 @@ export const FooterContent = [
 
 export const InternalHeroContent = [
   {
+    class:"iheroimage meta-menu",
     title: "Explore the Flavors of Nepal and India with Our Lunchtime Menu",
     description:
       "Our brief menu features some of the most popular Nepali dishes, prepared with a blend of Nepali and Indian Kitchen-style flavors. Enjoy our lunchtime selection of dishes, crafted by our experienced chefs.",
@@ -246,6 +247,7 @@ export const GalleryImage = [
 ];
 export const InternalHeroContent1 = [
   {
+    class:"iheroimage meta-gallery",
     title: "Matimahal Restaurant & Bar Gallery",
     description:
       "Welcome to our gallery, where you can see the photos of our restaurant, our dishes, and our happy customers. Browse through our gallery and get a glimpse of the cozy atmosphere, the mouthwatering food, and the friendly service that await you at our restaurant.",
@@ -253,6 +255,7 @@ export const InternalHeroContent1 = [
 ];
 export const InternalHeroContent2 = [
   {
+    class:"iheroimage meta-about",
     title: "We have over 10+ years of experience",
     description:
       "We wanted to create a place where people can enjoy the authentic flavors of these two countries, as well as the fusion of their culinary traditions. Our chefs have years of experience in preparing Nepali and Indian dishes, using fresh ingredients and spices.",
@@ -305,6 +308,7 @@ export const Rev2 = [
 ];
 export const InternalHeroContent3 = [
   {
+    class:"iheroimage meta-contact",
     title:
       "You can contact us via email, phone number or social medias as provided",
     description:

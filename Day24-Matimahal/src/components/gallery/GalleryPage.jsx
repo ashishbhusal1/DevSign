@@ -1,11 +1,11 @@
 import React from "react";
-import { GalleryContent, GalleryImage } from "../storage/HomeDb";
-import InternalHero from "../gallery/InternalHero";
+import { GalleryContent, GalleryImage, InternalHeroContent1 } from "../storage/HomeDb";
+import InternalHero from "../reusable/InternalHero";
 
 function GalleryPage() {
   return (
     <>
-      <InternalHero />
+      <InternalHero css={InternalHeroContent1[0].class} title={InternalHeroContent1[0].title} description={InternalHeroContent1[0].description}/>
       <section class="gallery-text">
         <div class="wrapper">
           <div class="content">

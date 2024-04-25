@@ -1,9 +1,9 @@
 import React from 'react'
-import ContactUs from '../contact/ContactUs'
+import ContactPage from '../contact/ContactPage'
 
 function Contact() {
   return (
-    <ContactUs />
+    <ContactPage />
   )
 }
 
