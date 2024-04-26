@@ -21,5 +21,4 @@ function NavBar() {
     </ul>
   );
 }
-
 export default NavBar;
