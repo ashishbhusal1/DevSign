@@ -44,6 +44,7 @@ function Service() {
     setCurrentindex(newIndex);
   };
 
+
   return (
     <>
       <h1>Service Page</h1>
@@ -63,5 +64,6 @@ function Service() {
     </>
   );
 }
+
 
 export default Service;
