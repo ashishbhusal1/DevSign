@@ -12,7 +12,7 @@ import { Header, RowHeader, Row, Skeleton } from "../components";
 function Contacts() {
   const [Users, setUsers] = useState([]);
   const [canDelete, setCanDelete] = useState(false);
-  
+
   // when user/contact is selected or deselected
   const ContactSelected = (user) => {
     setUsers(
@@ -33,6 +33,11 @@ function Contacts() {
     );
   };
 
+  //delete selected users
+  const deleteSelectedUsers = () => {
+    const filteredUsers = Users.filter((user) => !user.selected);
+    setUsers(filteredUsers);
+  };
 
   // load contacts function
   const GetAllContacts = async () => {
@@ -51,7 +56,11 @@ function Contacts() {
 
   return (
     <div className="contacts-page">
-      <Header count={Users.length} del={canDelete}/>
+      <Header
+        count={Users.length}
+        del={canDelete}
+        onDelete={deleteSelectedUsers}
+      />
 
       {Users.length === 0 ? (
         <Skeleton />

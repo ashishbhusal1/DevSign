@@ -1,6 +1,6 @@
 import { FiFilter, FiDelete, FiUserPlus } from "react-icons/fi";
 
-function Header({ count, del }) {
+function Header({ count, del ,onDelete}) {
   return (
     <div className="cp-header">
       <div className="appname">
@@ -14,7 +14,10 @@ function Header({ count, del }) {
           <p>Filter</p>
         </div>
 
-        <div className={del ? "btn-primary" : " btn-disabled"}>
+        <div
+          className={del ? "btn-primary" : " btn-disabled"}
+          onClick={del ? onDelete : undefined}
+        >
           <FiDelete />
           <p>Delete</p>
         </div>
