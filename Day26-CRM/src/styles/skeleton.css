@@ -1,0 +1,86 @@
+
+/* Skeletion */
+.skgreydark {
+background: linear-gradient(270deg, #ebebeb, #d7d7d7, #ebebeb);
+background-size: 600% 600%;
+-webkit-animation: sk-grey-dark 2s ease infinite;
+-moz-animation: sk-grey-dark 2s ease infinite;
+-o-animation: sk-grey-dark 2s ease infinite;
+animation: sk-grey-dark 2s ease infinite;
+}
+
+@-webkit-keyframes sk-grey-dark {
+0%{background-position:0% 50%}
+50%{background-position:100% 51%}
+100%{background-position:0% 50%}
+}
+@-moz-keyframes sk-grey-dark {
+0%{background-position:0% 50%}
+50%{background-position:100% 51%}
+100%{background-position:0% 50%}
+}
+@-o-keyframes sk-grey-dark {
+0%{background-position:0% 50%}
+50%{background-position:100% 51%}
+100%{background-position:0% 50%}
+}
+@keyframes sk-grey-dark {
+0%{background-position:0% 50%}
+50%{background-position:100% 51%}
+100%{background-position:0% 50%}
+}
+
+.skgreylight {
+background: linear-gradient(270deg, #ebebeb, #e6e6e6, #ebebeb);
+background-size: 600% 600%;
+
+-webkit-animation: sk-grey-light 2s ease infinite;
+-moz-animation: sk-grey-light 2s ease infinite;
+-o-animation: sk-grey-light 2s ease infinite;
+animation: sk-grey-light 2s ease infinite;
+
+}
+
+@-webkit-keyframes sk-grey-light {
+0%{background-position:0% 50%}
+50%{background-position:100% 51%}
+100%{background-position:0% 50%}
+}
+@-moz-keyframes sk-grey-light {
+0%{background-position:0% 50%}
+50%{background-position:100% 51%}
+100%{background-position:0% 50%}
+}
+@-o-keyframes sk-grey-light {
+0%{background-position:0% 50%}
+50%{background-position:100% 51%}
+100%{background-position:0% 50%}
+}
+@keyframes sk-grey-light {
+0%{background-position:0% 50%}
+50%{background-position:100% 51%}
+100%{background-position:0% 50%}
+}
+
+
+
+ul.skeletion {width: 90%;height: auto;margin: 0px auto;position: relative;top: 35%;}
+ul.skeletion li {width: auto;height: auto;overflow: hidden;margin-bottom: 15px;}
+
+/* small images */
+ul.skeletion li .sk-image {width: 50px;height: 50px;margin-right: 10px;float: left;}
+
+/* small icons */
+ul.skeletion li .sk-icon {width: 20px;height: 20px;margin-right: 10px;float: left;}
+
+/* content */
+ul.skeletion li .sk-content {width: calc(100% - 60px);height: auto;float: left;}
+
+ul.skeletion li .sk-image span {display: block;width: 100%;height: 100%;border-radius: 100%;}
+ul.skeletion li .sk-icon span {display: block;width: 100%;height: 100%;border-radius: 100%;}
+
+ul.skeletion li .sk-content .sk-title {width: 70%;height: auto;margin-top: 6px;}
+ul.skeletion li .sk-content .sk-title span {display: block;width: 100%;height: 15px;border-radius: 25px;}
+
+ul.skeletion li .sk-content .sk-title-long {width: 95%;height: auto;margin-top: 10px;}
+ul.skeletion li .sk-content .sk-title-long span {display: block;width: 100%;height: 12px;border-radius: 25px}
