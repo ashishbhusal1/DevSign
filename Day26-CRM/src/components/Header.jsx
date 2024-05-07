@@ -1,13 +1,12 @@
 import { FiFilter, FiDelete, FiUserPlus } from "react-icons/fi";
 
-function Header({ count, del ,onDelete}) {
+function Header({ count, del, onDelete }) {
   return (
     <div className="cp-header">
       <div className="appname">
         <h1>Contacts</h1>
         <p>{count} Total</p>
       </div>
-
       <div className="actions">
         <div className="btn-primary">
           <FiFilter />

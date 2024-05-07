@@ -14,7 +14,7 @@ function Row ({ user, onSelect}) {
       };
 
       return (
-            <div className="row">
+            <div className={user.selected ? 'row selected':'row'}>
                   <div className="col col5">
                         <input type="checkbox" onClick={onSelect}/>
                   </div>
