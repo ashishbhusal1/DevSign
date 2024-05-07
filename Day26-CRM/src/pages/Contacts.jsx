@@ -48,7 +48,6 @@ function Contacts() {
       console.error(error);
     }
   };
-  
 
   // load contacts on mounted
   useEffect(() => {
