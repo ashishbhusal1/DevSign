@@ -1,28 +1,30 @@
 import React from "react";
 import { CiMail, CiMobile1 } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
 
-function ContactDetails() {
+function ContactDetails({ onClose, user }) {
   return (
     <div className="contactSection">
       <div className="user">
         <div className="imgUser">
-          <img className="userImg" src="./user.jpg" alt="User Profile" />
-          <span>Matthis Oberholzer</span>
+          <img className="userImg" src={user.image} alt="User Profile" />
+          <span>{user.firstName + " " + user.lastName}</span>
+          <span></span>
           <div className="seperator"></div>
         </div>
 
         <div className="contacts">
           <div className="contactDetails">
             <CiMail />
-            <span>atuny0@sohu.com</span>
+            <span>{user.email}</span>
           </div>
           <div className="contactDetails">
             <CiMobile1 />
-            <span>+63 791 675 8914</span>
+            <span>{user.phone}</span>
           </div>
           <div className="contactDetails">
             <CiMobile1 />
-            <span>slashdot.org</span>
+            <span>{user.domain}</span>
           </div>
         </div>
         <div className="seperator"></div>
@@ -40,46 +42,49 @@ function ContactDetails() {
         <div className="details">
           <div className="moreDetails">
             <span>Company</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.company.name}</h2>
           </div>
           <div className="moreDetails">
             <span>Company Address</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.company.address.address}</h2>
           </div>
           <div className="moreDetails">
             <span>Date of Birth</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.birthDate}</h2>
           </div>
           <div className="moreDetails">
             <span>Blood Group</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.bloodGroup}</h2>
           </div>
           <div className="moreDetails">
             <span>Gender</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.gender}</h2>
           </div>
           <div className="moreDetails">
             <span>University</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.university}</h2>
           </div>
           <div className="moreDetails">
             <span>Age</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.age}</h2>
           </div>
           <div className="moreDetails">
             <span>IP Address</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.ip}</h2>
           </div>
           <div className="moreDetails">
             <span>EIN Number</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.ein}</h2>
           </div>
           <div className="moreDetails">
             <span>SSN Number</span>
-            <h2>Blanda-O'Keefe</h2>
+            <h2>{user.ssn}</h2>
           </div>
         </div>
         <div className="map">
+          <div className="close">
+            <IoMdClose onClick={onClose} />
+          </div>
           <div className="location">
             <span>Location</span>
             <img src="location.png" alt="" />

@@ -1,81 +1,74 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
-// components
-import { Header, RowHeader, Row, Skeleton } from "../components";
-
-// import Header from "../components/Header";
-// import RowHeader from "../components/RowHeader";
-// import Row from "../components/Row";
-// import Skeleton from "../components/Skeleton";
+import { Header, RowHeader, Row, Skeleton, ContactDetails } from "../components";
 
 function Contacts() {
-  const [Users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
   const [canDelete, setCanDelete] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(null);
 
-  // when user/contact is selected or deselected
-  const ContactSelected = (user) => {
-    setUsers(
-      Users.map((element) => {
-        if (element.id == user.id) {
-          element.selected = !element.selected;
-        }
-        return element;
-      })
-    );
-    userCanBeDeleted();
-  };
-  const userCanBeDeleted = () => {
-    setCanDelete(
-      Users.some((user) => {
-        if (user.selected == true) return true;
-      })
-    );
-  };
-
-  //delete selected users
-  const deleteSelectedUsers = () => {
-    const filteredUsers = Users.filter((user) => !user.selected);
-    setUsers(filteredUsers);
-  };
-
-  // load contacts function
-  const GetAllContacts = async () => {
-    try {
-      const response = await axios.get("https://dummyjson.com/users?limit=15");
-      setUsers(response.data.users);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  // load contacts on mounted
   useEffect(() => {
-    GetAllContacts();
+    const fetchAllContacts = async () => {
+      try {
+        const response = await axios.get("https://dummyjson.com/users?limit=15");
+        const usersWithSelected = response.data.users.map(user => ({
+          ...user,
+          selected: false
+        }));
+        setUsers(usersWithSelected);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchAllContacts();
   }, []);
+
+  useEffect(() => {
+    // Automatically update canDelete when users' selected state changes
+    const anySelected = users.some(user => user.selected);
+    setCanDelete(anySelected);
+  }, [users]); // Dependency on users to recalculate on their update
+
+  const handleUserSelect = (user) => {
+    setSelectedUser(user);
+    
+  };
+
+  const handleToggleSelect = (userId) => {
+    const updatedUsers = users.map(user =>
+      user.id === userId ? { ...user, selected: !user.selected } : user
+    );
+    setUsers(updatedUsers);
+  };
+
+  const handleCloseDetails = () => {
+    setSelectedUser(null);
+  };
+
+  const deleteSelectedUsers = () => {
+    setUsers(users.filter(user => !user.selected));
+    setCanDelete(false);
+    
+  };
+
+  if (selectedUser) {
+    return <ContactDetails user={selectedUser} onClose={handleCloseDetails} />;
+  }
 
   return (
     <div className="contacts-page">
-      <Header
-        count={Users.length}
-        del={canDelete}
-        onDelete={deleteSelectedUsers}
-      />
-
-      {Users.length === 0 ? (
-        <Skeleton />
-      ) : (
+      <Header count={users.length} del={canDelete} onDelete={deleteSelectedUsers} />
+      {users.length === 0 ? <Skeleton /> : (
         <div className="contacts-table">
           <RowHeader />
-          {Users.map((user) => {
-            return (
-              <Row
-                key={user.id}
-                user={user}
-                onSelect={() => ContactSelected(user)}
-              />
-            );
-          })}
+          {users.map(user => (
+            <Row
+              key={user.id}
+              user={user}
+              onSelect={() => handleUserSelect(user)}
+              onToggleSelect={handleToggleSelect}
+            />
+          ))}
         </div>
       )}
     </div>

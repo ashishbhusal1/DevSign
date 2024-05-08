@@ -8,7 +8,6 @@ function Modal() {
   const hideModalHandler = () => {
     setShowModal(false);
   };
-
   return (
     <>
       <button onClick={showModalHandler}>

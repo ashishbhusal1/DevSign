@@ -419,3 +419,10 @@ div.privateNotes p {
 div.links a{
       color: #05a6ff;
 }
+div.map div.close{
+  margin-top: -25px;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 40px;
+  margin-right: 10px;
+}
