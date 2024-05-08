@@ -281,6 +281,7 @@ div.contactSection {
   gap: 20px;
   justify-content: space-between;
   background-color: white;
+  border-radius: 10px;
 }
 div.user {
   padding: 20px;
@@ -425,4 +426,6 @@ div.map div.close{
   flex-direction: row-reverse;
   font-size: 40px;
   margin-right: 10px;
+  color: #838383;
+  cursor: pointer;
 }
