@@ -1,35 +1,23 @@
 import PropTypes from "prop-types";
 import { FiMoreHorizontal } from "react-icons/fi";
+
 import { UserCard } from "./";
 
-function Row({ user, onSelect, onToggleSelect }) {
-  const basicInfo = {
+function Row({ user, onSelect, onView }) {
+  const BasicInfo = {
     fname: user.firstName,
     lname: user.lastName,
     image: user.image,
     email: user.email,
   };
 
-  // Function to handle checkbox change
-  const handleCheckboxChange = (event) => {
-    event.stopPropagation(); // Prevents the row click event
-    onToggleSelect(user.id); // Toggle the selection state
-  };
-
   return (
-    <div
-      className={user.selected ? "row selected" : "row"}
-      onClick={() => onSelect(user)}
-    >
-      <div className="col col5" onClick={(e) => e.stopPropagation()}>
-        <input
-          type="checkbox"
-          onChange={handleCheckboxChange}
-          checked={user.selected || false}
-        />
+    <div className={user.selected ? "row selected" : "row"} onClick={onView}>
+      <div className="col col5" onClick={(e)=>e.stopPropagation()}>
+        <input type="checkbox" onClick={onSelect} />
       </div>
       <div className="col col25">
-        <UserCard info={basicInfo} />
+        <UserCard info={BasicInfo} />
       </div>
       <div className="col col20">
         <p>{user.company.name}</p>
@@ -48,9 +36,8 @@ function Row({ user, onSelect, onToggleSelect }) {
 }
 
 Row.propTypes = {
-  user: PropTypes.object.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  onToggleSelect: PropTypes.func.isRequired,
+  user: PropTypes.object,
+  onSelect: PropTypes.func,
 };
 
 export default Row;

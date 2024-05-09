@@ -20,7 +20,6 @@ function RowHeader () {
                         <p>City</p>
                         <span><FiArrowUp size={12} /></span>
                   </div>
-                  
                   <div className="col col10"></div>
             </div>
       );

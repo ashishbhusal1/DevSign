@@ -2,7 +2,7 @@ import Header from "./Header";
 import Row from "./Row";
 import RowHeader from "./RowHeader";
 import UserCard from "./UserCard";
-import ContactDetails from "./ContactDetails";
+import ViewContact from "./ViewContact";
 
 import Skeleton from "./Skeleton";
 
@@ -11,6 +11,6 @@ export {
       Row,
       RowHeader,
       UserCard,
-      Skeleton,
-      ContactDetails
+      ViewContact,
+      Skeleton
 }
