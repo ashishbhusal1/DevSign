@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 // components
-import { Header, RowHeader, Row, ViewContact, Skeleton } from "../components";
+import { Header, RowHeader, Row, ViewContact, Skeleton,Modal } from "../components";
 
 function Contacts() {
   const [Users, setUsers] = useState([]);
   const [SelectedContact, setSelectedContact] = useState({});
   const [UserSelected, setUserSelected] = useState(false);
   const [UserDetailModal, setUserDetailModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   const UserSelectionHandler = (usr) => {
     setUsers(
@@ -26,12 +27,7 @@ function Contacts() {
     setUserSelected(Users.some((user) => user.selected));
   };
 
-  // delete the selected contact
-  const DeleteSelectedUser = () => {
-    if (UserSelected) {
-      setUsers(Users.filter((user) => !user.selected));
-    }
-  };
+
 
   // view contact detail
   const ViewContactDetail = (user) => {
@@ -42,6 +38,24 @@ function Contacts() {
   const HideContactDetail = () => {
     setUserDetailModal(false);
   };
+
+  const ShowDeleteModal = () => {
+    setShowDeleteModal(!showDeleteModal);
+  };
+
+  const promptDelete = () => {
+    if (UserSelected) {
+      ShowDeleteModal();
+    }
+  };
+
+    // delete the selected contact
+    const DeleteSelectedUser = () => {
+      if (UserSelected) {
+        setUsers(Users.filter((user) => !user.selected));
+        ShowDeleteModal();
+      }
+    };
 
   // load contacts function
   const GetAllContacts = async () => {
@@ -64,7 +78,7 @@ function Contacts() {
         <Header
           count={Users.length}
           selected={UserSelected}
-          Delete={DeleteSelectedUser}
+          Delete={promptDelete}
         />
 
         {Users.length === 0 ? (
@@ -88,6 +102,10 @@ function Contacts() {
 
       {UserDetailModal && (
         <ViewContact selected={SelectedContact} close={HideContactDetail} />
+      )}
+
+      {showDeleteModal && (
+        <Modal close={ShowDeleteModal} onConfirm={DeleteSelectedUser} />
       )}
     </>
   );

@@ -3,6 +3,7 @@ import Row from "./Row";
 import RowHeader from "./RowHeader";
 import UserCard from "./UserCard";
 import ViewContact from "./ViewContact";
+import Modal from "./Modal";
 
 import Skeleton from "./Skeleton";
 
@@ -12,5 +13,6 @@ export {
       RowHeader,
       UserCard,
       ViewContact,
-      Skeleton
+      Skeleton,
+      Modal
 }

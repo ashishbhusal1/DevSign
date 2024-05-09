@@ -1,3 +1,4 @@
+import Modal from "./components/Modal";
 import Contacts from "./pages/Contacts";
 
 function App () {
