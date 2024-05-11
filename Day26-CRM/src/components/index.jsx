@@ -4,6 +4,7 @@ import RowHeader from "./RowHeader";
 import UserCard from "./UserCard";
 import ViewContact from "./ViewContact";
 import Modal from "./Modal";
+import AddContact from "./AddContact";
 
 import Skeleton from "./Skeleton";
 
@@ -14,5 +15,6 @@ export {
       UserCard,
       ViewContact,
       Skeleton,
-      Modal
+      Modal,
+      AddContact,
 }

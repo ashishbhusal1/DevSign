@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 // components
-import { Header, RowHeader, Row, ViewContact, Skeleton,Modal } from "../components";
+import { Header, RowHeader, Row, ViewContact, Skeleton,Modal, AddContact } from "../components";
 
 function Contacts() {
   const [Users, setUsers] = useState([]);
@@ -10,6 +10,7 @@ function Contacts() {
   const [UserSelected, setUserSelected] = useState(false);
   const [UserDetailModal, setUserDetailModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showAddContactModal,setShowAddContactModal]=useState(false);
 
   const UserSelectionHandler = (usr) => {
     setUsers(
@@ -42,6 +43,10 @@ function Contacts() {
   const ShowDeleteModal = () => {
     setShowDeleteModal(!showDeleteModal);
   };
+
+  const AddContactDetail=()=>{
+    setShowAddContactModal(!showAddContactModal)
+  }
 
   const promptDelete = () => {
     if (UserSelected) {
@@ -79,6 +84,7 @@ function Contacts() {
           count={Users.length}
           selected={UserSelected}
           Delete={promptDelete}
+          Add={AddContactDetail}
         />
 
         {Users.length === 0 ? (
@@ -106,6 +112,10 @@ function Contacts() {
 
       {showDeleteModal && (
         <Modal close={ShowDeleteModal} onConfirm={DeleteSelectedUser} />
+      )}
+
+      {showAddContactModal && (
+        <AddContact />
       )}
     </>
   );

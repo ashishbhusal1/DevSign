@@ -1,3 +1,4 @@
+import AddContact from "./components/AddContact";
 import Modal from "./components/Modal";
 import Contacts from "./pages/Contacts";
 

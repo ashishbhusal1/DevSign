@@ -1,6 +1,6 @@
 import { FiFilter, FiDelete, FiUserPlus } from "react-icons/fi";
 
-function Header({ count, selected, Delete }) {
+function Header({ count, selected, Delete,Add }) {
   return (
     <div className="cp-header">
       <div className="appname">
@@ -22,7 +22,7 @@ function Header({ count, selected, Delete }) {
           <p>Delete</p>
         </div>
 
-        <div className="btn-secondary">
+        <div className="btn-secondary" onClick={Add}>
           <FiUserPlus />
           <p>Add Contacts</p>
         </div>
