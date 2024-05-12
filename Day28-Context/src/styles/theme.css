@@ -1,0 +1,111 @@
+h1,p{
+    margin: 0;
+    padding: 0;
+}
+html {
+  background-color: #f8f8f8;
+}
+div.outerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.container {
+  width: 1000px;
+  height: 800px;
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+  margin-top: 10px;
+
+}
+div.content{
+    background-color: #fafbfc;
+    width: calc(50%);
+    padding: 50px 20px 100px 80px;
+}
+div.content h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: #397ef6;
+}
+div.content p{
+    margin:20px 0px;
+    color: #b5b6bf;
+}
+div.content img{
+    height: 630px;
+    width: 500px;
+    object-fit: cover;
+}
+div.login{
+    width: calc(50%);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 80px;
+}
+div.login span.english{
+    font-size: 14px;
+    color: #0a3767;
+    display: flex;
+    justify-content: flex-end;
+}
+div.login div.start{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+div.login div.start span.free{
+    font-size: 13px;
+    color: #0a3767;
+}
+div.login div.start span.sign{
+    font-size: 35px;
+}
+div.login div.start div.member span.already{
+    font-size: 16px;
+}
+div.login div.input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+div.login div.input input{
+   outline: none;
+   padding: 20px;
+   border-radius: 10px;
+   margin-bottom: 5px;
+   border: 1px solid rgba(128, 128, 128, 0.314);
+}
+div.login div.button{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+div.login div.button button.primary{
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #397ef6;
+    color: white;
+    font-size: 15px;
+    border: none;
+}
+div.login div.button button.secondary{
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.314);;
+    color:black;
+    font-size: 15px;
+    background-color: white;
+
+}
+div.login p.text{
+    width: calc(65%);
+    font-size: 9px;
+}
+div.login p.text span.blue{
+    color: #397ef6;
+}
