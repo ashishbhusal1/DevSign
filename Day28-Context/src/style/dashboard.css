@@ -1,0 +1,484 @@
+
+/* default */
+body, p, h1, h2, h3, h4, h5, h6, div {font-family: 'Montserrat', sans-serif; margin:0px; padding:0px;user-select: none;}
+body {background-color: #fff;margin: 0;font-size: 14px;line-height: 18px;color: #545758;-webkit-font-smoothing: antialiased;}
+ul, li {list-style-type:none; margin:0px; padding:0px;user-select: none;font-family: 'Montserrat', sans-serif;}
+html {overflow-x: hidden !important;}
+
+
+/* color palette */
+:root {
+--dark-blue : #343768;
+--light-blue : #449ADF;
+--dark-grey : #545758;
+--off-white : #FCFCFC;
+
+--primary-border : #DBDBDB;
+--secondary-border : #E5E5E5;
+
+--good-green : #40ca0f;
+--bad-red : #FF0000;
+}
+
+/* simple reusable transition */
+.transAe {transition: color .2s ease, background .5s ease, opacity .8s ease, border-color .4s ease, width .4s ease, height .4s ease;
+-moz-transition: color .2s ease, background .5s ease, opacity .8s ease, border-color .4s ease, width .4s ease, height .4s ease;
+-webkit-transition: color .2s ease, background .5s ease, opacity .8s ease, border-color .4s ease, width .4s ease, height .4s ease;
+-o-transition: color .2s ease, background .5s ease, opacity .8s ease, border-color .4s ease, width .4s ease, height .4s ease;}
+
+/* buttons and links settings */
+.btn-primary {width: max-content;
+margin: 0px auto;
+background-color: #449ADF;
+border: 1px solid #449ADF;
+color: #fff;
+padding: 8px 15px;
+border-radius: 7px;
+cursor: pointer;}
+.btn-primary > img {float: left;
+margin-right: 8px;
+margin-top: 4px;}
+.btn-primary > p {    display: inline-block;
+font-size: 10pt !important;
+font-weight: 500;
+line-height: 18pt !important;}
+
+.btn-secondary {width: max-content;
+margin: 0px auto;
+background-color: #fff;
+border: 1px solid #449ADF;
+color: #449ADF;
+padding: 8px 15px;
+border-radius: 7px;
+cursor: pointer;}
+.btn-secondary > img {float: left;
+margin-right: 8px;
+margin-top: 4px;}
+.btn-secondary > p {    display: inline-block;
+font-size: 10pt !important;
+font-weight: 500;
+line-height: 18pt !important;}
+
+
+/* Navigation Theme */
+.dashboard-app {background-color: #ffffff;width: 100vw;height: 100vh;overflow: hidden;}
+.dashboard-app .tenant-nav {width: 245px;height: 100%;background-color: var(--dark-blue);overflow: hidden;float: left;}
+.dashboard-app .tenant-nav .logo-content {width: 100%;height: 100px;overflow: hidden;text-align: center;vertical-align: middle;}
+.dashboard-app .tenant-nav .logo-content h1 {
+      color: white;
+      letter-spacing: 0.15px;
+      margin: 40px;
+}
+.dashboard-app .tenant-nav .logo-content img {width: 160px;height: auto;margin-top: 25px;float: none;}
+.dashboard-app .tenant-nav ul.navigation {width: 100%;height: auto;margin-top: 75px;overflow: hidden;}
+.dashboard-app .tenant-nav ul.navigation > li {width: 100%;height: 45px;overflow: hidden;border-bottom: none;}
+.dashboard-app .tenant-nav ul.navigation > li.active { background-color: rgba(0,0,0,0.20); border-bottom: 1px solid rgba(0,0,0,0.40)}
+.dashboard-app .tenant-nav ul.navigation > li:hover {cursor: pointer; background-color: rgba(0,0,0,0.20); }
+
+.dashboard-app .tenant-nav ul.navigation > li > .icon {width: 15px;height: 15px;padding: 15px 20px;float: left;}
+.dashboard-app .tenant-nav ul.navigation > li > .icon img {width: 100%;}
+.dashboard-app .tenant-nav ul.navigation > li > .content {width: calc(100% - 55px);height: 45px;float: left;color: #fff;position: relative;}
+.dashboard-app .tenant-nav ul.navigation > li > .content p {font-size: 11pt;font-weight: 400;letter-spacing: 0.25px;line-height: 36pt;}
+.dashboard-app .tenant-nav ul.navigation > li > .content span {position: absolute;color: #fff;z-index: 2;top: 10px;right: 15px;width: 20px;height: 20px;border: 2px solid #fff;background-color: var(--light-blue);overflow: hidden;font-size: 11pt;font-weight: 600;border-radius: 50%;text-align: center;line-height: 16pt;}
+
+/* Content Theme, Header and Main content area */
+.dashboard-app .tenant-content {width: calc(100% - 245px);height: 100%;background-color: #ffffff;float: left;}
+
+/* Dashboard Header, Page title, search and owner profile */
+.dashboard-app .tenant-content .content-header {width: 100%;height: 100px;border-bottom: 1px solid #DBDBDB;overflow: hidden;}
+.dashboard-app .tenant-content .content-header ul {width: 100%;height: 45px;margin: 28px 0;}
+.tenant-content .content-header ul > li {width: 25%;height: 100%;float: left;text-align: left;}
+.tenant-content .content-header ul > li:nth-child(2) {width: calc(50% - 30px);margin: 0 15px;}
+.tenant-content .content-header ul > li h3 {padding-left: 20px;font-size: 15pt;font-weight: 500;color: var(--light-blue);line-height: 33pt;}
+.tenant-content .content-header ul > li input {margin: 0px;padding: 0px;border: 1px solid #D7DDE2;background-color: #F2F5F8;width: calc(100% - 47px);height: calc(100% - 2px);border-radius: 8px;font-family: 'Montserrat', sans-serif;padding-left: 45px;background-image: url(./../images/search.svg);background-repeat: no-repeat;background-size: 15px;background-position: 12px center;}
+
+/* Page content owner mini profile section */
+.tenant-content .content-header ul > li .tenant {width: auto;height: 100%;overflow: hidden;float: right;margin-right: 20px; cursor: pointer;}
+.tenant-content .content-header ul > li .tenant .notification {width: 35px;height: 100%;float: left;position: relative;}
+.tenant-content .content-header ul > li .tenant .notification img {width: 20px;margin-top: 11px;}
+.tenant-content .content-header ul > li .tenant .notification span {position: absolute;color: #fff;z-index: 2;top: 6px;right: 6px;width: 16px;height: 16px;border: 1px solid var(--dark-blue);background-color: var(--light-blue);overflow: hidden;font-size: 9pt;font-weight: 600;border-radius: 50%;text-align: center;line-height: 13pt;}
+
+.tenant-content .content-header ul > li .tenant .user {width: auto;height: 100%;float: left;}
+.tenant-content .content-header ul > li .tenant .user h3 {width: max-content;height: auto;float: left;color: var(--dark-blue);font-size: 14pt;font-weight: 600; margin-right: 10px;}
+.tenant-content .content-header ul > li .tenant .user .avatar {width: 45px;height: 45px; border-radius: 50%; overflow: hidden;margin-left: 15px;}
+.tenant-content .content-header ul > li .tenant .user .avatar img {width: 100%;}
+
+/* Page Content */
+.dashboard-app .tenant-content .page-content {width: 100%;height: calc(100% - 101px);overflow: hidden;background-color: #fff; position: relative;}
+
+
+
+/* Tenant Dashboard */
+.tenant-dashboard {
+width: calc(100% - 90px);
+height: calc(100% - 60px);
+overflow: hidden;
+background-image: url(./../images/dashboard-background.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding: 30px 45px;
+}
+
+.tenant-dashboard .user {
+width: 100%;
+height: 65px;
+overflow: hidden;
+}
+
+.tenant-dashboard .user .avatar {
+width: 65px;
+height: 65px;
+overflow: hidden;
+border-radius: 50%;
+float: left;
+margin-right: 15px;
+}
+
+.tenant-dashboard .user .avatar img {
+width: 100%;
+}
+
+.tenant-dashboard .user .content {
+width: auto;
+float: left;
+}
+
+.tenant-dashboard .user .content h2 {
+font-size: 16pt;
+letter-spacing: 0.15px;
+color: var(--dark-grey);
+line-height: 12pt;
+margin-top: 12px;
+}
+
+.tenant-dashboard .user .content p {
+font-size: 11pt;
+letter-spacing: 0.15px;
+line-height: 24pt;
+}
+
+.ten-score {    width: auto;
+height: auto;
+float: right;
+margin-top: 5px;}
+.ten-score .tscontent {    width: auto;
+height: auto;
+float: left;
+text-align: right;}
+.ten-score .tscontent h3 {    font-size: 16pt;
+font-weight: 500;
+line-height: 18pt;}
+.ten-score .tscontent p {font-size: 10pt;}
+
+.ten-score .tsarrow {    width: 20px;
+height: 100%;
+margin-left: 10px;
+float: right;}
+.ten-score .tsarrow img {    width: 20px;
+margin-top: 5px;}
+
+
+/* Dashboard & Boxes */
+.teandashboard {    width: 100%;
+height: max-content;
+margin-top: 30px;}
+
+ul.dash-content {    width: 100%;
+height: auto;
+overflow: hidden;}
+ul.dash-content > li {    width: calc(33.33% - 25px);
+height: auto;
+float: left;}
+ul.dash-content > li:nth-child(2) {margin: 0 30px;}
+
+div.dash-box {background-color: #fff;
+border: 1px solid var(--primary-border);
+border-radius: 7px;
+margin-top: 20px;}
+div.dash-box > div.header {width: auto;
+height: auto;
+padding: 25px;}
+div.dash-box > div.header > h3 {font-size: 11pt;
+display: inline-block;
+letter-spacing: 0.15px;}
+div.dash-box > div.header > span {display: inline;
+float: right;
+color: var(--light-blue);
+font-size: 10pt;
+font-weight: 500;
+line-height: 16pt;
+cursor: pointer;}
+
+div.dash-box > div.dbimage {width: auto;
+height: 175px;
+background-image: url(./../images/house.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+border-radius: 7px 7px 0 0;
+position: relative;}
+div.dash-box > div.dbimage > div.count {width: auto;
+height: auto;
+padding: 10px 15px;
+background-color: #0000007a;
+border-radius: 35px;
+right: 10px;
+position: absolute;
+bottom: 10px;}
+div.dash-box > div.dbimage > div.count > p {float: left;
+color: #fff;
+font-size: 11pt;
+padding-right: 10px;
+font-weight: 600;}
+div.dash-box > div.dbimage > div.count > img {width: 17px;
+margin-top: 1px;}
+
+div.dash-box > div.content {    width: auto;
+height: auto;
+padding: 25px;
+padding-top: 0;}
+
+
+/* Currrent Blanace */
+div.dbc-balance > h2 {    font-size: 16pt;
+line-height: 24pt;
+font-weight: 600;}
+div.dbc-balance > p {    font-size: 11pt;
+line-height: 24pt;}
+div.dbc-balance > .npay {width: 100%;
+height: auto;
+padding: 10px 0;}
+div.dbc-balance > .npay img {width: 20px;
+margin-right: 8px;
+float: left;}
+div.dbc-balance > .npay p {font-size: 11pt;
+line-height: 16pt;}
+
+div.dbc-balance > ul.paymethod {    width: 100%;
+height: auto;
+border-top: 1px solid #E9E9E9;
+margin-top: 15px;}
+div.dbc-balance > ul.paymethod > li {width: auto;
+height: auto;
+padding: 15px 0;
+overflow: hidden;}
+div.dbc-balance > ul.paymethod > li img {    width: 20px;
+float: left;
+margin-right: 5px;}
+div.dbc-balance > ul.paymethod > li p {    font-size: 10pt;
+float: left;}
+div.dbc-balance > ul.paymethod > li span {cursor:pointer; font-size: 10pt;
+float: right;
+font-weight: 500;
+color: var(--light-blue);}
+
+/* Tenants Quick Links */
+ul.dllinks {width: calc(100% - 10px);
+height: 235px;
+overflow-y: scroll;
+padding-right: 10px;}
+ul.dllinks > li {width: 100%;
+height: auto;
+padding: 15px 0;
+overflow: hidden;
+cursor: pointer;
+border-bottom: 1px solid #EBEBEB;}
+ul.dllinks > li:hover { cursor: pointer; background-color: #F8F8F8;}
+ul.dllinks > li:last-child {border: none;}
+
+ul.dllinks > li > div.image {width: 55px;
+height: 100%;
+text-align: center;
+float: left;}
+ul.dllinks > li > div.image img {width: 25px;
+height: 23px;
+object-fit: contain;
+margin-top: 11px;}
+
+ul.dllinks > li > div.content {width: calc(100% - 55px);
+height: auto;
+float: left;}
+ul.dllinks > li > div.content h3 {    font-size: 12pt;
+line-height: 21pt;
+font-weight: 600;
+color: #4c4c4c;}
+ul.dllinks > li > div.content p {    font-size: 10pt;
+line-height: 10pt;
+color: #000;}
+
+/* Dashboard Property Detail */
+div.propery-detail {    width: auto;
+height: auto;
+padding-top: 15px;}
+div.propery-detail > div.title {width: auto;
+padding-bottom: 5px;}
+div.propery-detail > div.title h4 {    font-size: 11pt;
+font-weight: 600;
+color: #428FD1;
+display: inline-block;
+line-height: 25pt;}
+div.propery-detail > div.title span {    padding: 5px;
+background-color: #428FD1;
+color: #fff;
+float: right;}
+
+div.propery-detail h3 {font-size: 12pt;}
+div.propery-detail p {}
+
+div.propery-detail > ul.features {}
+div.propery-detail > ul.features li {}
+
+ul.main-feat {    width: auto;
+height: auto;
+padding: 16px 0;
+border-top: 1px solid #E9E9E9;
+margin-top: 15px;
+overflow: hidden;
+padding-bottom: 5px;}
+ul.main-feat > li {width: 33.33%;
+float: left;
+height: auto;
+overflow: hidden;}
+ul.main-feat > li > img {    width: 17px;
+float: left;
+margin-right: 6px;}
+ul.main-feat > li > p {font-size: 10pt;
+letter-spacing: 0.15px;
+font-weight: 500;
+line-height: 12pt;
+color: #000;}
+
+/* Tenant Agency */
+div.agency-profile {width: 100%;
+height: auto;
+padding: 10px 0;
+overflow: hidden;}
+div.agency-profile > div.image {    width: 50px;
+height: 50px;
+float: left;
+border-radius: 50%;
+background-color: #343768;
+text-align: center;
+color: #fff;
+overflow: hidden;
+margin-right: 10px;}
+div.agency-profile > div.image h2 {font-size: 22pt;
+line-height: 37pt;
+text-align: center;
+color: #fff;}
+
+div.agency-profile > div.content {width: calc(100% - 60px);
+float: left;
+height: auto;}
+div.agency-profile > div.content h3 {    font-size: 12pt;
+line-height: 24pt;
+color: #343768;}
+div.agency-profile > div.content p {    font-size: 10pt;
+line-height: 5pt;
+color: #000;}
+
+/* Notification or Dashboard Activity */
+ul.dvc-activity {
+width: calc(100% - 10px);
+height: 280px;
+overflow-y: scroll;
+padding-right: 10px;
+}
+
+ul.dvc-activity>li {
+width: 100%;
+padding: 15px 0;
+height: auto;
+overflow: hidden;
+cursor: pointer;
+}
+
+ul.dvc-activity>li .icon {
+width: 35px;
+height: 35px;
+overflow: hidden;
+float: left;
+margin-right: 15px;
+border-radius: 50%;
+text-align: center;
+background-color: var(--light-blue);
+}
+
+ul.dvc-activity>li .icon img {
+width: 100%;
+}
+
+ul.dvc-activity>li .nonuser img {
+width: 20px;
+margin-top: 8px;
+}
+
+ul.dvc-activity>li .content {
+width: calc(100% - 50px);
+float: left;
+}
+
+ul.dvc-activity>li .content p {
+font-size: 11pt;
+line-height: 16pt;
+font-weight: 400;
+color: #000;
+}
+
+ul.dvc-activity>li .content p strong {
+color: var(--light-blue);
+font-weight: 500;
+}
+
+ul.dvc-activity>li .content span {
+font-size: 9pt;
+color: #656565;
+line-height: 16pt;
+}
+
+ul.dvc-activity>li .content span img {
+width: 13px;
+margin-right: 3px;
+margin-top: 2px;
+display: inline-block;
+}
+
+
+
+
+
+
+
+
+/* input focus */
+textarea:focus, input:focus {outline: none;}
+*:focus {outline: none;}
+
+/* browser and settings */
+/* Selection Color */
+::selection {background:#534A69;color:#fff;text-shadow:none;}
+::-moz-selection {background:#534A69;color:#fff;text-shadow:none;}
+::-webkit-selection {background:#534A69;color:#fff;text-shadow:none;}
+
+/* webkit scrollbar custom design/ deafult for rest browsers */
+._propscrl::-webkit-scrollbar {width: 5px; height:5px;background-color: #F5F5F5;}
+._propscrl::-webkit-scrollbar:hover {cursor:pointer;} 
+/* Track */
+._propscrl::-webkit-scrollbar-track {-webkit-border-radius: 15px;border-radius: 15px;}
+/* Handle */
+._propscrl::-webkit-scrollbar-thumb {-webkit-border-radius: 15px;border-radius: 15px;}
+._propscrl::-webkit-scrollbar-thumb:window-inactive {background: transparent;}
+/* hover track and handle */
+._propscrl:hover::-webkit-scrollbar-track {display:block;}
+._propscrl:hover::-webkit-scrollbar-thumb {background: rgba(0, 0, 0, 0.15);}
+
+/*placeholder*/
+::-webkit-input-placeholder {/* Chrome/Opera/Safari */
+color: rgb(113, 113, 113);}
+::-moz-placeholder { /* Firefox 19+ */
+color: rgb(113, 113, 113);}
+:-ms-input-placeholder { /* IE 10+ */
+color: rgb(113, 113, 113);}
+:-moz-placeholder { /* Firefox 18- */
+color: rgb(113, 113, 113);}

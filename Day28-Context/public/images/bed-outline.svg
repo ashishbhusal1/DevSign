@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="13.038" viewBox="0 0 16.5 13.038">
+  <g id="bed-outline" transform="translate(-2.625 -6)">
+    <path id="Path_2700" data-name="Path 2700" d="M17.134,11.942H6.75V8.193A1.447,1.447,0,0,1,8.193,6.75h8.654a1.447,1.447,0,0,1,1.443,1.443v3.75Z" transform="translate(-1.644)" fill="none" stroke="#545758" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_2701" data-name="Path 2701" d="M3.375,23.221V19.183a2.314,2.314,0,0,1,2.308-2.308H16.067a2.314,2.314,0,0,1,2.308,2.308v4.038" transform="translate(0 -4.933)" fill="none" stroke="#545758" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_2702" data-name="Path 2702" d="M3.375,28.153v-.289A.868.868,0,0,1,4.241,27H17.509a.868.868,0,0,1,.866.866v.289" transform="translate(0 -9.865)" fill="none" stroke="#545758" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_2703" data-name="Path 2703" d="M7.875,15.231v-.577A1.157,1.157,0,0,1,9.029,13.5h2.885a1.157,1.157,0,0,1,1.154,1.154v.577" transform="translate(-2.192 -3.289)" fill="none" stroke="#545758" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_2704" data-name="Path 2704" d="M18,15.231v-.577A1.157,1.157,0,0,1,19.154,13.5h2.885a1.157,1.157,0,0,1,1.154,1.154v.577" transform="translate(-7.125 -3.289)" fill="none" stroke="#545758" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

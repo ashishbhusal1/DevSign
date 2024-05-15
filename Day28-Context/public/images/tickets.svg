@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="13.038" viewBox="0 0 16.5 13.038">
+  <g id="tickets" transform="translate(0.75 0.75)">
+    <path id="Path_7" data-name="Path 7" d="M4.818,6.75H16.933a1.443,1.443,0,0,1,1.442,1.443v8.654a1.443,1.443,0,0,1-1.442,1.442H4.818a1.443,1.443,0,0,1-1.443-1.442V8.193A1.443,1.443,0,0,1,4.818,6.75Z" transform="translate(-3.375 -6.75)" fill="rgba(255,255,255,0)" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_8" data-name="Path 8" d="M7.875,11.25l5.192,4.038L18.26,11.25" transform="translate(-5.567 -8.942)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

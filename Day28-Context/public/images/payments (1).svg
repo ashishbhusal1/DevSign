@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="14.775" viewBox="0 0 16.5 14.775">
+  <g id="payments" transform="translate(0.75 0.756)">
+    <path id="Path_12" data-name="Path 12" d="M5.106,10.125H16.644a1.731,1.731,0,0,1,1.731,1.731v6.923a1.731,1.731,0,0,1-1.731,1.731H5.106a1.731,1.731,0,0,1-1.731-1.731V11.856a1.731,1.731,0,0,1,1.731-1.731Z" transform="translate(-3.375 -7.241)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_13" data-name="Path 13" d="M16.477,7.385V6.3a1.8,1.8,0,0,0-2.141-1.771L4.84,6.154A1.8,1.8,0,0,0,3.375,7.926V9.693" transform="translate(-3.375 -4.501)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_14" data-name="Path 14" d="M24.779,20.308a1.154,1.154,0,1,1,1.154-1.154A1.154,1.154,0,0,1,24.779,20.308Z" transform="translate(-13.24 -11.077)" fill="#fff"/>
+  </g>
+</svg>
