@@ -6,12 +6,12 @@ import { useContext } from "react";
 import { AuthContext } from "../App";
 
 function UserPage() {
-      const { setAuth } = useContext(AuthContext);
+  const { setAuth } = useContext(AuthContext);
   return (
     <div className="dashboard-app">
       <NavBar />
       <div className="tenant-content">
-         <Header />
+        <Header />
         <div className="page-content" id="page-content">
           <div className="tenant-dashboard">
             <div className="user">
