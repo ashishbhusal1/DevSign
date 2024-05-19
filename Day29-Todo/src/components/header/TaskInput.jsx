@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 function TaskInput({ hideInput }) {
   let search = useRef(null);
-  
+
   useEffect(() => {
     search.current.focus();
   });

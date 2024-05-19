@@ -1,13 +1,13 @@
-import React from 'react'
-import { VscAdd } from 'react-icons/vsc'
+import React from "react";
+import { VscAdd } from "react-icons/vsc";
 
-function AddTask({showInput}) {
+function AddTask({ showInput }) {
   return (
-    <div className='add-task' onClick={showInput}>
-        <VscAdd />
-        <p>Add Task</p>
+    <div className="add-task" onClick={showInput}>
+      <VscAdd />
+      <p>Add Task</p>
     </div>
-  )
+  );
 }
 
-export default AddTask
+export default AddTask;
