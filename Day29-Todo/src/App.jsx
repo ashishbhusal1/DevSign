@@ -1,15 +1,13 @@
-import Header from "./components/header/Header";
-import TodoCard from "./components/todo/TodoCard";
+
+import { AppProvider } from "./store/Context";
+import TodoPage from "./pages/TodoPage";
 
 function App() {
-  return (
-    <div className="todo-app">
-      <Header />
 
-      <ul className="todo-list">
-        <TodoCard />
-      </ul>
-    </div>
+  return (
+    <AppProvider>
+      <TodoPage />
+    </AppProvider>
   );
 }
 

@@ -1,16 +1,16 @@
 import { VscEdit, VscTrash } from "react-icons/vsc";
 
-function TodoCard() {
+function TodoCard({item, onDelete}) {
   return (
     <li>
       <div className="radio"></div>
       <div className="content">
-        <h3>You don't have task to do, you can add tasks here.</h3>
-        <p>description goes here.</p>
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
       </div>
       <div className="action">
         <VscEdit />
-        <VscTrash />
+        <VscTrash onClick={onDelete}/>
       </div>
       <div className="editaction">
         <button>Cancel</button>
