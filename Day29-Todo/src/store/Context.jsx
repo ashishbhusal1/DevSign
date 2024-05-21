@@ -1,34 +1,40 @@
-import { useState } from "react";
-import React from "react";
-
+import React, { useState } from "react";
 const AppContext = React.createContext();
 
-function AppProvider({children}) {
+function AppProvider({ children }) {
   const [TodoList, setTodoList] = useState([
     {
       id: 1,
-      title: "Lorem ipsum dolor sit amet consectetur",
+      title:
+        "Consectetur adipisicing elit. Labore id sapiente quis et ea aperiam voluptatum recusandae.",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quidem!",
-      completed: false,
+        "Et quia sint unde quaerat enim rerum ipsam, cumque quibusdam laborum, amet sit!",
+      completed: true,
     },
     {
       id: 2,
-      title: "Lorem ipsum dolor sit amet consectetur",
+      title: "Repellendus rem ullam quibusdam qui, molestiae earum porro id in",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quidem!",
-      completed: false,
-    },
-    {
-      id: 3,
-      title: "Lorem ipsum dolor sit amet consectetur",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quidem!",
+        "praesentium illum voluptas deserunt velit corporis laborum, exercitationem error iusto ex sunt.",
       completed: false,
     },
   ]);
+
+  const [User, setUser] = useState("Guest");
+
+  const [showNotification, setShowNotification] = useState("");
+
   return (
-    <AppContext.Provider value={{ TodoList, setTodoList }}>
+    <AppContext.Provider
+      value={{
+        TodoList,
+        setTodoList,
+        User,
+        setUser,
+        showNotification,
+        setShowNotification,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

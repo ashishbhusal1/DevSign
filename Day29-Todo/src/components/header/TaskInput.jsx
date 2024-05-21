@@ -1,33 +1,47 @@
-import { useContext, useEffect, useRef } from "react";
-import { AppContext } from "../../store/Context";
+import { useEffect, useContext, useRef } from "react";
+import { AppContext } from "./../../store/Context";
 
 function TaskInput({ hideInput }) {
-  let search = useRef(null);
+  // context data
+  const { TodoList, setTodoList, showNotification, setShowNotification } =
+    useContext(AppContext);
 
-  const {TodoList, setTodoList} = useContext(AppContext);
+  // input fields
+  const title = useRef("");
+  const description = useRef("");
 
-  const title=useRef('');
-  const description=useRef('');
-
+  // add task funciton
   const AddTask = () => {
     setTodoList([
       ...TodoList,
       {
-        id: TodoList.length+1,
+        id: TodoList.length + 1,
         title: title.current.value,
         description: description.current.value,
         completed: false,
       },
     ]);
-    title.current.value='';
-    description.current.value='';
 
+    title.current.value = "";
+    description.current.value = "";
+
+    // disable write mode
     hideInput();
+
+    // show notification
+    setShowNotification("Task Created");
+
+    // hide notification
+    setTimeout(() => {
+      setShowNotification("");
+    }, 3000);
   };
 
+  // component on mounted
   useEffect(() => {
     title.current.focus();
-  });
+  }, []);
+
   return (
     <div className="input-box">
       <div className="input">
