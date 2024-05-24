@@ -9,6 +9,8 @@ import DeleteTodo from "../components/modal/DeleteTodo";
 import EmptyTodo from "../components/todo/EmptyTodo";
 import Notification from "../components/todo/Notification.jsx";
 
+import Sidebar from "../components/sidebar/Navigation.jsx";
+
 function TodoPage() {
   const { TodoList, setTodoList, showNotification, setShowNotification } =
     useContext(AppContext);
@@ -62,40 +64,93 @@ function TodoPage() {
     }, 3000);
   };
 
+  // edit or update task
+  const EditTaskMode = (todo) => {
+    setTodoList(
+      TodoList.map((item) => {
+        if (item.id === todo.id) item.editMode = true;
+        else item.editMode = false;
+        return item;
+      })
+    );
+  };
+
+  // edit mode cancel
+  const EditTaskCancel = () => {
+    setTodoList(
+      TodoList.map((item) => {
+        item.editMode = false;
+        return item;
+      })
+    );
+  };
+
+  // edit task
+  const EditTaskSave = (todo, title, description) => {
+    // setTodoList(TodoList.map(item => {
+    //     if (item.id === todo.id) {
+    //         return {...item, title: title, description: description, editMode: false};
+    //     }else return item;
+    // }));
+
+    // one liner
+    setTodoList(
+      TodoList.map((item) =>
+        item.id === todo.id
+          ? { ...item, title: title, description: description, editMode: false }
+          : item
+      )
+    );
+  };
+
   return (
     <div className="todo-app">
-      <Header />
+      <Sidebar />
 
-      <ul className="todo-list">
-        {TodoList.map((todo) => {
-          return (
-            <TodoCard
-              key={todo.id}
-              item={todo}
-              Delete={() => DeleteBoxHandler(todo, true)}
-              Complete={() => CompleteHandler(todo)}
-            />
-          );
-        })}
-      </ul>
+      <div className="todo-body">
+        <div className="todo-lists">
+          <Header />
 
-      {/* Empty Todo UI */}
-      {TodoList.length == 0 && <EmptyTodo />}
+          <ul className="todo-list">
+            {TodoList.map((todo) => {
+              return (
+                <TodoCard
+                  key={todo.id}
+                  item={todo}
+                  Delete={() => DeleteBoxHandler(todo, true)}
+                  Complete={() => CompleteHandler(todo)}
+                  Edit={() => EditTaskMode(todo)}
+                  EditCancel={EditTaskCancel}
+                  EditSave={(title, description) =>
+                    EditTaskSave(todo, title, description)
+                  }
+                />
+              );
+            })}
+          </ul>
 
-      {/* Delete Modal */}
-      {deleteModal.show &&
-        createPortal(
-          <DeleteTodo
-            item={deleteModal.todo}
-            close={() => DeleteBoxHandler(null, false)}
-            Delete={DeleteTodoItem}
-          />,
-          document.body
-        )}
+          {/* Empty Todo UI */}
+          {TodoList.length == 0 && <EmptyTodo />}
 
-      {/* Notification */}
-      {showNotification &&
-        createPortal(<Notification action={showNotification} />, document.body)}
+          {/* Delete Modal */}
+          {deleteModal.show &&
+            createPortal(
+              <DeleteTodo
+                item={deleteModal.todo}
+                close={() => DeleteBoxHandler(null, false)}
+                Delete={DeleteTodoItem}
+              />,
+              document.body
+            )}
+
+          {/* Notification */}
+          {showNotification &&
+            createPortal(
+              <Notification action={showNotification} />,
+              document.body
+            )}
+        </div>
+      </div>
     </div>
   );
 }

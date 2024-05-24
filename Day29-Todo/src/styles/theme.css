@@ -50,9 +50,12 @@ p:focus {
 }
 
 div.todo-app {
-  max-width: 728px;
+  width: 100%;
   margin: 0px auto;
-  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 header {
   display: flex;
@@ -66,7 +69,8 @@ header {
 }
 
 header h1 {
-  font-size: 24pt;
+  font-size: 22pt;
+  letter-spacing: -0.85px;
 }
 header div.add-task {
   display: flex;
@@ -126,6 +130,11 @@ ul.todo-list li div.content {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+ul.todo-list li div.content input {
+  border: none;
+  font-size: 11pt;
+  margin-bottom: 5px;
 }
 ul.todo-list li div.content h3 {
   font-size: 13pt;
@@ -197,14 +206,11 @@ button.addbtn {
 }
 
 ul.todo-list li.complete div.radio {
-  background-color: #4caf50;
+  background-color: #919191;
+  border: 1px solid #5f5f5f;
 }
 
 ul.todo-list li.complete div.content h3 {
-  text-decoration: line-through;
-}
-
-ul.todo-list li.complete div.content p {
   text-decoration: line-through;
 }
 
@@ -349,7 +355,6 @@ div.notification {
   gap: 8px;
   padding: 15px;
 }
-
 div.notification p {
   color: white;
 }
@@ -397,4 +402,257 @@ div.overlay {
   z-index: 9;
   bottom: 0;
   right: 0;
+}
+
+.todo-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 280px;
+  height: 100vh;
+  background-color: #fafafa;
+  border-right: 1px solid #e5e5e5;
+}
+.todo-body {
+  flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+}
+
+.todo-lists {
+  max-width: 728px;
+  margin: 0px auto;
+  margin-top: 30px;
+}
+
+/* Dashboard user panel */
+div.user-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 20px);
+  height: 45px;
+  padding: 10px;
+}
+div.user-panel .avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+div.user-panel .avatar:hover {
+  background-color: #e5e5e5;
+}
+div.user-panel .avatar .image {
+  width: 30px;
+  overflow: hidden;
+  height: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+}
+div.user-panel .avatar .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div.user-panel .avatar p {
+  font-size: 11pt;
+  font-weight: 500;
+  color: black;
+}
+div.user-panel .nav-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Dashboard default panel navigation */
+
+div.nav-default {
+  width: calc(100% - 20px);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+div.nav-default ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+}
+div.nav-default ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% - 10px);
+  gap: 8px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+div.nav-default ul li:hover {
+  background-color: #e5e5e5;
+}
+div.nav-default ul li.active {
+  background-color: #e5e5e5;
+}
+div.nav-default ul li span {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+div.nav-default ul li h3 {
+  flex: 1;
+  font-size: 11pt;
+  font-weight: 400;
+}
+div.nav-default ul li p {
+  align-self: center;
+  font-size: 10pt;
+  color: #959595;
+}
+
+/* project navigation */
+
+div.title {
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+div.title h4 {
+  font-size: 11pt;
+  color: black;
+  padding-left: 10px;
+}
+
+div.nav-projects {
+  width: calc(100% - 20px);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+div.nav-projects ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+}
+div.nav-projects ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% - 10px);
+  gap: 4px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+div.nav-projects ul li:hover {
+  background-color: #e5e5e5;
+}
+div.nav-projects ul li span {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+div.nav-projects ul li span h4 {
+  font-size: 16pt;
+  font-weight: 400;
+}
+div.nav-projects ul li h3 {
+  flex: 1;
+  font-size: 11pt;
+  font-weight: 400;
+}
+div.nav-projects ul li p {
+  align-self: center;
+  font-size: 10pt;
+  color: #959595;
+}
+
+/* Selection Color */
+::selection {
+  background: #ff9900;
+  color: #fff;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #ff9900;
+  color: #fff;
+  text-shadow: none;
+}
+::-webkit-selection {
+  background: #ff9900;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar:hover {
+  width: 5px;
+  cursor: pointer;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.11);
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background: rgba(0, 0, 0, 1);
+  -webkit-box-shadow: inset 0 0 15px rgba(237, 237, 237, 1);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(60, 49, 49, 0.56);
+}
+
+/*placeholder*/
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-weight: 100;
+}
+::-moz-placeholder {
+  color: #ccc;
+  font-weight: 100;
+}
+:-ms-input-placeholder {
+  color: #ccc;
+  font-weight: 100;
+}
+:-moz-placeholder {
+  color: #ccc;
+  font-weight: 100;
+}
+
+/* input focus */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
 }
