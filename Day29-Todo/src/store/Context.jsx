@@ -24,6 +24,11 @@ function AppProvider({ children }) {
 
   const [showNotification, setShowNotification] = useState("");
 
+  const [AppSetting, setAppSetting] = useState({
+    sidebar: "small",
+    darkMode: false,
+  });
+
   return (
     <AppContext.Provider
       value={{
@@ -33,6 +38,8 @@ function AppProvider({ children }) {
         setUser,
         showNotification,
         setShowNotification,
+        AppSetting,
+        setAppSetting,
       }}
     >
       {children}

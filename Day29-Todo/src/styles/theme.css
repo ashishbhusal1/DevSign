@@ -377,8 +377,6 @@ div.delete-box {
 
 div.delete-box div.close {
   align-self: flex-end;
-}
-div.delete-box div.close img {
   cursor: pointer;
 }
 
@@ -392,6 +390,7 @@ div.delete-box div.action {
 div.delete-box div.action button {
   padding: 5px 15px;
   border: none;
+  cursor: pointer;
 }
 
 div.overlay {
@@ -404,6 +403,58 @@ div.overlay {
   right: 0;
 }
 
+/* small navigation */
+
+.todo-sidebar.small {
+  width: 55px;
+}
+.todo-sidebar.small div.user-panel .avatar {
+  display: none;
+}
+.todo-sidebar.small div.nav-default ul li h3 {
+  display: none;
+}
+.todo-sidebar.small div.nav-default ul li p {
+  display: none;
+}
+.todo-sidebar.small div.title {
+  display: none;
+}
+.todo-sidebar.small div.nav-projects ul li h3 {
+  display: none;
+}
+.todo-sidebar.small div.nav-projects ul li p {
+  display: none;
+}
+.todo-sidebar.small div.user-panel {
+  justify-content: center;
+}
+
+/* hover elements */
+.todo-sidebar.small div.nav-default ul li:hover .hover {
+  display: block;
+}
+.todo-sidebar.small div.nav-projects ul li:hover .hover {
+  display: block;
+}
+
+div.nav-default ul li .hover,
+div.nav-projects ul li .hover {
+  display: none;
+  background-color: black;
+  padding: 10px 15px;
+  border-radius: 15px;
+  position: absolute;
+  left: 50px;
+  width: max-content;
+}
+div.nav-default ul li .hover p,
+div.nav-projects ul li .hover p {
+  display: inline-block !important;
+  color: white;
+  line-height: 18px;
+}
+
 .todo-sidebar {
   display: flex;
   flex-direction: column;
@@ -413,12 +464,16 @@ div.overlay {
   height: 100vh;
   background-color: #fafafa;
   border-right: 1px solid #e5e5e5;
+
+  transition: all 0.2s linear;
 }
 .todo-body {
   flex: 1;
   height: 100vh;
   overflow-y: scroll;
   display: flex;
+
+  transition: all 0.2s linear;
 }
 
 .todo-lists {

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../store/Context";
 import { createPortal } from "react-dom";
+import TodoHandler from "../javascript/TodoHandler.js";
 
 // components
 import Header from "./../components/header/Header";
@@ -36,32 +37,16 @@ function TodoPage() {
     const deleteItemId = deleteModal.todo.id;
     setTodoList(TodoList.filter((todo) => todo.id !== deleteItemId));
     DeleteBoxHandler(null, false);
-
-    // show notification
-    setShowNotification("Task Deleted");
-
-    // hide notification
-    setTimeout(() => {
-      setShowNotification("");
-    }, 3000);
+    TodoHandler.Notification("Task Deleted", 3, setShowNotification);
   };
 
   const CompleteHandler = (todo) => {
-    const toCompleteId = todo.id;
-    setTodoList(
-      TodoList.map((item) => {
-        if (item.id == toCompleteId) item.completed = !item.completed;
-        return item;
-      })
+    TodoHandler.CompleteTaskItem(
+      todo,
+      TodoList,
+      setTodoList,
+      setShowNotification
     );
-
-    // show notification
-    setShowNotification("Task Updated");
-
-    // hide notification
-    setTimeout(() => {
-      setShowNotification("");
-    }, 3000);
   };
 
   // edit or update task
