@@ -23,14 +23,7 @@ function TodoPage() {
 
   // delete box show & hide
   const DeleteBoxHandler = (todo, visible) => {
-    if (visible) {
-      deleteModal.show = true;
-      deleteModal.todo = todo;
-      setDeleteModal({ ...deleteModal });
-    } else {
-      deleteModal.show = false;
-      setDeleteModal({ ...deleteModal });
-    }
+    TodoHandler.DeleteBoxToggle(todo, visible, deleteModal, setDeleteModal);
   };
 
   const DeleteTodoItem = () => {
@@ -51,13 +44,7 @@ function TodoPage() {
 
   // edit or update task
   const EditTaskMode = (todo) => {
-    setTodoList(
-      TodoList.map((item) => {
-        if (item.id === todo.id) item.editMode = true;
-        else item.editMode = false;
-        return item;
-      })
-    );
+    TodoHandler.EditTaskItem(todo, TodoList, setTodoList);
   };
 
   // edit mode cancel

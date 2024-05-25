@@ -34,7 +34,47 @@ const CompleteTaskItem = (todo, TodoList, setFunc, setNotiFunc) => {
   Notification("Task Updated", 3, setNotiFunc);
 };
 
+/**
+ * This function opens modal of Edit Item
+ * @param {Object} todo selected todo
+ * @param {Array} TodoList array of all task items -> state
+ * @param {Function} setFunc state function to update TodoList
+ * @returns Updated List
+ */
+const EditTaskItem = (todo, TodoList, setFunc) => {
+  setFunc(
+    TodoList.map((item) => {
+      if (item.id === todo.id) item.editMode = true;
+      else item.editMode = false;
+      return item;
+    })
+  );
+};
+
+/**
+ * This function toggles delete modal
+ * @param {Object} todo selected todo
+ * @param {*} visible array of all task items -> state
+ * @param {*} deleteModal initial modal state
+ * @param {*} setDeleteModal function to update delete modal
+ * @returns Boolean value of toggled modal
+ */
+const DeleteBoxToggle = (todo, visible, deleteModal, setDeleteModal) => {
+  if (!deleteModal) {
+    deleteModal = { show: false, todo: {} };
+  }
+  if (visible) {
+    deleteModal.show = true;
+    deleteModal.todo = todo;
+  } else {
+    deleteModal.show = false;
+  }
+  setDeleteModal({ ...deleteModal });
+};
+
 export default {
   Notification,
   CompleteTaskItem,
+  EditTaskItem,
+  DeleteBoxToggle,
 };
