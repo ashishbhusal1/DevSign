@@ -1,7 +1,20 @@
+import { Routes, Route } from "react-router-dom";
+
 import { AppProvider } from "./store/Context";
+
+// components
+
+// pages
 import TodoPage from "./pages/TodoPage";
 import LoginPage from "./pages/LoginPage";
-import { Routes,Route } from "react-router-dom";
+
+/**
+ * Friday - 5/24
+ * Created login page
+ * add sidebar in app page
+ * can edit task
+ *
+ */
 
 function App() {
   return (

@@ -3,7 +3,7 @@ import { VscClose } from "react-icons/vsc";
 function DeleteTodo({ item, close, Delete }) {
   return (
     <>
-      <div className="delete-box">
+      <div className="delete-box todo15s fadeInUp">
         <div className="close" onClick={close}>
           <VscClose />
         </div>

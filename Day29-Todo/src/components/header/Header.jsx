@@ -12,7 +12,9 @@ function Header() {
     <header>
       <AppSearch />
       {writeMode ? null : <AddTask showInput={() => setWriteMode(true)} />}
-      {writeMode && <TaskInput hideInput={() => setWriteMode(false)} />}
+      {writeMode && (
+        <TaskInput hideInput={() => setWriteMode(false)} border={true} />
+      )}
     </header>
   );
 }

@@ -24,10 +24,37 @@ function AppProvider({ children }) {
 
   const [showNotification, setShowNotification] = useState("");
 
-  const [AppSetting, setAppSetting] = useState({
-    sidebar: "small",
-    darkMode: false,
+  const [AppSettings, setAppSettings] = useState({
+    sidebar: "large",
+    darkmode: false,
   });
+
+  const [Projects, setProjects] = useState([
+    {
+      id: 1,
+      title: "Mobile Apps",
+      color: "#03a9f4",
+      tasks: 35,
+    },
+    {
+      id: 2,
+      title: "Government Website",
+      color: "orange",
+      tasks: 19,
+    },
+    {
+      id: 3,
+      title: "Restaurant UI/UX",
+      color: "#9c27b0",
+      tasks: 28,
+    },
+    {
+      id: 4,
+      title: "More Projects",
+      color: "#ff5722",
+      tasks: 2,
+    },
+  ]);
 
   return (
     <AppContext.Provider
@@ -38,8 +65,10 @@ function AppProvider({ children }) {
         setUser,
         showNotification,
         setShowNotification,
-        AppSetting,
-        setAppSetting,
+        AppSettings,
+        setAppSettings,
+        Projects,
+        setProjects,
       }}
     >
       {children}

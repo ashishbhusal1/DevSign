@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../store/Context";
 import { createPortal } from "react-dom";
-import TodoHandler from "../javascript/TodoHandler.js";
 
 // components
 import Header from "./../components/header/Header";
@@ -11,6 +10,9 @@ import EmptyTodo from "../components/todo/EmptyTodo";
 import Notification from "../components/todo/Notification.jsx";
 
 import Sidebar from "../components/sidebar/Navigation.jsx";
+
+// script
+import TodoHandler from "../javascript/TodoHandler.js";
 
 function TodoPage() {
   const { TodoList, setTodoList, showNotification, setShowNotification } =
@@ -23,16 +25,28 @@ function TodoPage() {
 
   // delete box show & hide
   const DeleteBoxHandler = (todo, visible) => {
-    TodoHandler.DeleteBoxToggle(todo, visible, deleteModal, setDeleteModal);
+    if (visible) {
+      deleteModal.show = true;
+      deleteModal.todo = todo;
+      setDeleteModal({ ...deleteModal });
+    } else {
+      deleteModal.show = false;
+      setDeleteModal({ ...deleteModal });
+    }
   };
 
   const DeleteTodoItem = () => {
     const deleteItemId = deleteModal.todo.id;
     setTodoList(TodoList.filter((todo) => todo.id !== deleteItemId));
+
+    // remove delete box
     DeleteBoxHandler(null, false);
-    TodoHandler.Notification("Task Deleted", 3, setShowNotification);
+
+    // notification
+    TodoHandler.Notification("Task Deleted", 2, setShowNotification);
   };
 
+  // complete task item
   const CompleteHandler = (todo) => {
     TodoHandler.CompleteTaskItem(
       todo,
@@ -44,7 +58,13 @@ function TodoPage() {
 
   // edit or update task
   const EditTaskMode = (todo) => {
-    TodoHandler.EditTaskItem(todo, TodoList, setTodoList);
+    setTodoList(
+      TodoList.map((item) => {
+        if (item.id === todo.id) item.editMode = true;
+        else item.editMode = false;
+        return item;
+      })
+    );
   };
 
   // edit mode cancel
@@ -83,7 +103,7 @@ function TodoPage() {
         <div className="todo-lists">
           <Header />
 
-          <ul className="todo-list">
+          <ul className="todo-list todo20s fadeInUp">
             {TodoList.map((todo) => {
               return (
                 <TodoCard

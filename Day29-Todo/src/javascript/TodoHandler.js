@@ -1,10 +1,11 @@
 /**
- * This function will show and hide notification
+ * this function will detete item from state
  * @param {String} title Notification title
- * @param {Integer} duration duration to show and hide notification in second
- * @param {Function} setFunc setShowNotification to update state
- * @returns {void} Noting return
+ * @param {Integer} duration Duration to visible notification in minutes
+ * @param {Function} setFunc state function to change the state
+ * @returns {void} nothing to return
  */
+
 const Notification = (title, duration, setFunc) => {
   // show notification
   setFunc(title);
@@ -16,65 +17,54 @@ const Notification = (title, duration, setFunc) => {
 };
 
 /**
- * This function will complete selected task
- * @param {Object} todo selected todo
- * @param {Array} TodoList array of all task items -> state
- * @param {Function} setFunc state function to update state
- * @returns {void} Nothing to return
+ * This function will complete the selected task or item
+ * @param {Object} todo Current seleted item to complete the task
+ * @param {Array} todolist TodoList state
+ * @param {Function} setFunc setTodo list function to change the state
+ * @returns {void} nothing to return
  */
-const CompleteTaskItem = (todo, TodoList, setFunc, setNotiFunc) => {
+const CompleteTaskItem = (todo, todolist, setFunc, setNotiFunc) => {
   const toCompleteId = todo.id;
   setFunc(
-    TodoList.map((item) => {
-      if (item.id == toCompleteId) item.completed = !item.completed;
-      return item;
-    })
+    todolist.map((item) =>
+      item.id == toCompleteId ? { ...item, completed: !item.completed } : item
+    )
   );
 
+  // notification
   Notification("Task Updated", 3, setNotiFunc);
 };
 
 /**
- * This function opens modal of Edit Item
- * @param {Object} todo selected todo
- * @param {Array} TodoList array of all task items -> state
- * @param {Function} setFunc state function to update TodoList
- * @returns Updated List
+ * This function will create new task
+ * @param {Array} todolist TodoList context
+ * @param {String} title task input for title
+ * @param {String} description task input for description
+ * @param {Function} setFunc setTodoList to set the todolist state
+ * @param {Function} setNotiFunc setNotification to set new notification
+ * @returns {void} Nothing to return
  */
-const EditTaskItem = (todo, TodoList, setFunc) => {
-  setFunc(
-    TodoList.map((item) => {
-      if (item.id === todo.id) item.editMode = true;
-      else item.editMode = false;
-      return item;
-    })
-  );
-};
 
-/**
- * This function toggles delete modal
- * @param {Object} todo selected todo
- * @param {*} visible array of all task items -> state
- * @param {*} deleteModal initial modal state
- * @param {*} setDeleteModal function to update delete modal
- * @returns Boolean value of toggled modal
- */
-const DeleteBoxToggle = (todo, visible, deleteModal, setDeleteModal) => {
-  if (!deleteModal) {
-    deleteModal = { show: false, todo: {} };
-  }
-  if (visible) {
-    deleteModal.show = true;
-    deleteModal.todo = todo;
-  } else {
-    deleteModal.show = false;
-  }
-  setDeleteModal({ ...deleteModal });
+const CreateNewTask = (todolist, title, description, setFunc, setNotiFunc) => {
+  setFunc([
+    ...todolist,
+    {
+      id: todolist.length + 1,
+      title: title.current.value,
+      description: description.current.value,
+      completed: false,
+    },
+  ]);
+
+  title.current.value = "";
+  description.current.value = "";
+
+  // notification
+  Notification("Task Created", 3, setNotiFunc);
 };
 
 export default {
   Notification,
   CompleteTaskItem,
-  EditTaskItem,
-  DeleteBoxToggle,
+  CreateNewTask,
 };

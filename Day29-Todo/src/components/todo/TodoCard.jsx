@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { VscEdit, VscTrash, VscCheck } from "react-icons/vsc";
 
 function TodoCard({ item, Delete, Complete, Edit, EditCancel, EditSave }) {
@@ -10,6 +10,12 @@ function TodoCard({ item, Delete, Complete, Edit, EditCancel, EditSave }) {
     EditSave(title, description);
   };
 
+  // auto height adjustment
+  const textAreaAdjust = (e) => {
+    e.target.style.height = "auto";
+    e.target.style.height = e.target.scrollHeight + "px";
+  };
+
   return (
     <li className={item.completed ? "complete" : item.editMode ? "edit" : ""}>
       <div className="radio" onClick={Complete}>
@@ -19,16 +25,18 @@ function TodoCard({ item, Delete, Complete, Edit, EditCancel, EditSave }) {
         <div className="content">
           <input
             type="text"
+            className="title"
             placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          <input
-            type="text"
+          <textarea
             placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-          />
+            onKeyUp={textAreaAdjust}
+          ></textarea>
+          {/* <input type="text" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} /> */}
         </div>
       ) : (
         <div className="content">
@@ -36,10 +44,12 @@ function TodoCard({ item, Delete, Complete, Edit, EditCancel, EditSave }) {
           <p>{item.description}</p>
         </div>
       )}
+
       <div className="action">
-        <VscEdit onClick={Edit} />
-        <VscTrash onClick={Delete} />
+        <VscEdit onClick={Edit} size={20} />
+        <VscTrash onClick={Delete} size={20} />
       </div>
+
       <div className="editaction">
         <button onClick={EditCancel}>Cancel</button>
         <button className="addbtn" onClick={EditTaskHandler}>

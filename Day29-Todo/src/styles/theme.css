@@ -66,6 +66,7 @@ header {
   top: 0;
   background-color: var(--site-white);
   padding: 10px;
+  z-index: 1;
 }
 
 header h1 {
@@ -136,6 +137,13 @@ ul.todo-list li div.content input {
   font-size: 11pt;
   margin-bottom: 5px;
 }
+ul.todo-list li div.content textarea {
+  border: none;
+  resize: none;
+}
+ul.todo-list li div.content input.title {
+  font-size: 14pt;
+}
 ul.todo-list li div.content h3 {
   font-size: 13pt;
   font-weight: normal;
@@ -185,12 +193,49 @@ div.input-box div.input input {
   padding: 5px;
   border: none;
 }
+
+div.input-box div.input textarea {
+  padding: 5px;
+  border: none;
+  resize: none;
+}
+div.input-box div.input input.title {
+  font-size: 14pt;
+}
+
+div.input-box div.dueproj {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  position: relative;
+}
+div.input-box div.dueproj div.btn {
+  border: 1px solid #d7d6d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+div.input-box div.dueproj div.btn p {
+  font-size: 10pt;
+  color: #616161;
+}
+
+div.input-box div.dueproj div.btn:hover {
+  background-color: #efefef;
+  cursor: pointer;
+  user-select: none;
+}
+
 div.input-box div.button {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
-  border-top: 1px solid #b6b6b6;
+  border-top: 1px solid #d7d6d6;
   padding-top: 15px;
+  margin-top: 10px;
 }
 div.input-box div.button button {
   border: none;
@@ -364,10 +409,9 @@ div.delete-box {
   flex-direction: column;
   background-color: white;
   padding: 25px;
-  border: 1px solid #a8a8a8;
   width: 450px;
   border-radius: 7px;
-  box-shadow: 0px 0px 23px #0000001a;
+  box-shadow: 0px 20px 50px rgb(0 0 0 / 30%);
   position: absolute;
   z-index: 99;
   top: 20%;
@@ -377,6 +421,8 @@ div.delete-box {
 
 div.delete-box div.close {
   align-self: flex-end;
+}
+div.delete-box div.close img {
   cursor: pointer;
 }
 
@@ -401,21 +447,33 @@ div.overlay {
   z-index: 9;
   bottom: 0;
   right: 0;
+  opacity: 0;
 }
 
-/* small navigation */
+.todo-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 280px;
+  height: 100vh;
+  background-color: #fafafa;
+  border-right: 1px solid #e5e5e5;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.todo-body {
+  flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+
+  transition: all 0.2s ease-in-out;
+}
 
 .todo-sidebar.small {
-  width: 55px;
-}
-.todo-sidebar.small div.user-panel .avatar {
-  display: none;
-}
-.todo-sidebar.small div.nav-default ul li h3 {
-  display: none;
-}
-.todo-sidebar.small div.nav-default ul li p {
-  display: none;
+  width: 50px;
 }
 .todo-sidebar.small div.title {
   display: none;
@@ -429,57 +487,41 @@ div.overlay {
 .todo-sidebar.small div.user-panel {
   justify-content: center;
 }
-
-/* hover elements */
-.todo-sidebar.small div.nav-default ul li:hover .hover {
-  display: block;
-}
-.todo-sidebar.small div.nav-projects ul li:hover .hover {
-  display: block;
-}
-
-div.nav-default ul li .hover,
-div.nav-projects ul li .hover {
+.todo-sidebar.small div.user-panel .avatar {
   display: none;
-  background-color: black;
-  padding: 10px 15px;
-  border-radius: 15px;
-  position: absolute;
-  left: 50px;
-  width: max-content;
 }
-div.nav-default ul li .hover p,
-div.nav-projects ul li .hover p {
+.todo-sidebar.small div.nav-default ul li h3 {
+  display: none;
+}
+.todo-sidebar.small div.nav-default ul li p {
+  display: none;
+}
+
+.todo-sidebar.small div.nav-default ul li:hover div.hover {
+  display: block;
+}
+
+div.nav-default ul li div.hover {
+  display: none;
+  width: max-content;
+  padding: 6px 15px;
+  background-color: black;
+  position: absolute;
+  border-radius: 20px;
+  left: 44px;
+  top: 0px;
+  z-index: 9;
+}
+div.nav-default ul li div.hover p {
   display: inline-block !important;
   color: white;
-  line-height: 18px;
-}
-
-.todo-sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 280px;
-  height: 100vh;
-  background-color: #fafafa;
-  border-right: 1px solid #e5e5e5;
-
-  transition: all 0.2s linear;
-}
-.todo-body {
-  flex: 1;
-  height: 100vh;
-  overflow-y: scroll;
-  display: flex;
-
-  transition: all 0.2s linear;
 }
 
 .todo-lists {
   max-width: 728px;
   margin: 0px auto;
   margin-top: 30px;
+  min-width: 728px;
 }
 
 /* Dashboard user panel */
@@ -556,6 +598,7 @@ div.nav-default ul li {
   cursor: pointer;
   padding: 5px;
   border-radius: 4px;
+  position: relative;
 }
 div.nav-default ul li:hover {
   background-color: #e5e5e5;
@@ -645,6 +688,41 @@ div.nav-projects ul li p {
   color: #959595;
 }
 
+div.projectmenu {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #d7d6d6;
+  border-radius: 4px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+  left: 80px;
+}
+div.projectmenu ul {
+  display: flex;
+  flex-direction: column;
+}
+div.projectmenu ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+div.projectmenu ul li:hover {
+  background-color: #d9d9d9;
+}
+
+/* Add task modal */
+div.addtask-modal {
+  width: 620px;
+  height: auto;
+  position: absolute;
+  top: 13%;
+  left: calc(50% - 310px);
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 20px 50px rgb(0 0 0 / 30%);
+  z-index: 90;
+}
+
 /* Selection Color */
 ::selection {
   background: #ff9900;
@@ -689,20 +767,20 @@ div.nav-projects ul li p {
 
 /*placeholder*/
 ::-webkit-input-placeholder {
-  color: #ccc;
-  font-weight: 100;
+  color: #818181;
+  font-weight: 300;
 }
 ::-moz-placeholder {
-  color: #ccc;
-  font-weight: 100;
+  color: #818181;
+  font-weight: 300;
 }
 :-ms-input-placeholder {
-  color: #ccc;
-  font-weight: 100;
+  color: #818181;
+  font-weight: 300;
 }
 :-moz-placeholder {
-  color: #ccc;
-  font-weight: 100;
+  color: #818181;
+  font-weight: 300;
 }
 
 /* input focus */
