@@ -478,9 +478,7 @@ div.overlay {
 .todo-sidebar.small div.title {
   display: none;
 }
-.todo-sidebar.small div.nav-projects ul li h3 {
-  display: none;
-}
+.todo-sidebar.small div.nav-projects ul li h3,
 .todo-sidebar.small div.nav-projects ul li p {
   display: none;
 }
