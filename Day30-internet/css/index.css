@@ -121,7 +121,7 @@ div.herocontent > button {
   font-weight: 400;
   font-size: 14px;
 }
-.offerwrapper{
+.offerwrapper {
   margin-top: -50px;
 }
 div.offercontet {
@@ -310,9 +310,8 @@ div.latestimg p {
   font-size: 40px;
   color: white;
 }
-div.wave1{
+div.wave1 {
   margin-bottom: -320px;
-
 }
 .customerwrapper ul li p {
   font-size: 17px;
@@ -376,7 +375,6 @@ div.wave1{
   font-size: 18px;
   color: #9098a1;
   margin-left: 500px;
-  
 }
 .footerwrapper ul {
   gap: 70px;
